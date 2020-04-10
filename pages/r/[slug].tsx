@@ -42,23 +42,29 @@ function formatIngredient({ name, measurement, quantity }: Ingredient): string {
 }
 
 const RecipePage: NextPage<RecipeProps> = ({ recipe }) => {
-  const servingText = `${recipe.serving} persona${
-    recipe.serving > 1 ? 's' : ''
-  }`;
-
   return (
     <>
       <img width="303px" height="228px" src={`/${recipe.slug}.jpg`}></img>
       <h1>{recipe.title}</h1>
-      <h3>Ingredientes</h3>
-      <span>{`(${servingText})`}</span>
+      <div className="serving">
+        <h3>Ingredientes</h3>
+        <span>{`(${recipe.serving} ${pluralize(
+          'persona',
+          recipe.serving
+        )})`}</span>
+      </div>
       <ul>
         {recipe.ingredients.map((ingredient) => (
-          <div key={ingredient.name}>
-            <li>{formatIngredient(ingredient)}</li>
-          </div>
+          <li key={ingredient.name}>{formatIngredient(ingredient)}</li>
         ))}
       </ul>
+      <style jsx>
+        {`
+          .serving h3 {
+            display: inline-block;
+          }
+        `}
+      </style>
     </>
   );
 };

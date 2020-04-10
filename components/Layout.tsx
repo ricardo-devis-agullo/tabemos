@@ -27,8 +27,10 @@ export const Layout: React.FC = ({ children }) => {
       </Link>
       <div className="content">{children}</div>
       <style jsx global>{`
+        ul,
         body,
         html {
+          padding: 0;
           margin: 0;
         }
         body {
@@ -36,6 +38,10 @@ export const Layout: React.FC = ({ children }) => {
           line-height: 1.6;
           color: #222;
           background: #fafafa;
+        }
+        ol,
+        ul {
+          list-style: none outside none;
         }
         h1 {
           margin: 0;
