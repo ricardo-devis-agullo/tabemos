@@ -30,15 +30,12 @@ export const Layout: React.FC = ({ children }) => {
         body,
         html {
           margin: 0;
-          line-height: 1.6;
-          color: #222;
-          max-width: 40rem;
-          padding: 2rem;
-          margin: auto;
-          background: #fafafa;
         }
         body {
           font-family: 'Roboto', sans-serif;
+          line-height: 1.6;
+          color: #222;
+          background: #fafafa;
         }
         h1 {
           margin: 0;
@@ -54,9 +51,6 @@ export const Layout: React.FC = ({ children }) => {
         }
         header {
           cursor: pointer;
-          position: absolute;
-          top: 0;
-          left: 0;
           width: 100%;
           font-family: 'Indie Flower', cursive;
           background-color: #e590c1;
@@ -68,6 +62,9 @@ export const Layout: React.FC = ({ children }) => {
         .content {
           text-align: center;
           margin-top: 30px;
+          max-width: 40rem;
+          padding: 2rem;
+          margin: auto;
         }
       `}</style>
     </>
