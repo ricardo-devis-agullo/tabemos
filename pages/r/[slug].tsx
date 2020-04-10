@@ -6,7 +6,25 @@ interface RecipeProps {
 }
 
 const RecipePage: NextPage<RecipeProps> = ({ recipe }) => {
-  return <p>This is the blog post {JSON.stringify(recipe.ingredients)}.</p>;
+  const servingText = `${recipe.serving} persona${
+    recipe.serving > 1 ? 's' : ''
+  }`;
+
+  return (
+    <>
+      <img width="303px" height="228px" src={`/${recipe.slug}.jpg`}></img>
+      <h1>{recipe.title}</h1>
+      <h3>Ingredientes</h3>
+      <span>{`(${servingText})`}</span>
+      <ul>
+        {recipe.ingredients.map((ingredient) => (
+          <div key={ingredient.name}>
+            <li>{ingredient.name}</li>
+          </div>
+        ))}
+      </ul>
+    </>
+  );
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {

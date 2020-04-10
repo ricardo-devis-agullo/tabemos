@@ -15,17 +15,21 @@ interface Ingredient {
   measurement: Measurement;
 }
 
-export type Recipe = {
+interface BaseRecipe {
+  title: string;
+  serving: number;
   ingredients: Ingredient[];
   steps: string[];
-};
-
-interface Recipes {
-  [slug: string]: Recipe;
 }
 
-export const recipes: Recipes = {
+export interface Recipe extends BaseRecipe {
+  slug: string;
+}
+
+const baseRecipes: Record<string, BaseRecipe> = {
   'ensalada-de-cilantro': {
+    title: 'Ensalada de cilantro',
+    serving: 2,
     ingredients: [
       { name: 'limón', quantity: 1 / 4, measurement: 'unidad' },
       { name: 'cilantro', quantity: 1, measurement: 'manojo' },
@@ -38,3 +42,13 @@ export const recipes: Recipes = {
     steps: [],
   },
 };
+
+export const recipes: Record<string, Recipe> = Object.fromEntries(
+  Object.entries(baseRecipes).map(([slug, baseRecipe]) => [
+    slug,
+    {
+      ...baseRecipe,
+      slug,
+    },
+  ])
+);
