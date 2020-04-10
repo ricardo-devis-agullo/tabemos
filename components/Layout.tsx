@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Link from 'next/link';
 
 export const Layout: React.FC = ({ children }) => {
   return (
@@ -10,18 +11,20 @@ export const Layout: React.FC = ({ children }) => {
           key="google-font-cabin"
         />
       </Head>
-      <header>
-        <div className="title">
-          <h1>Minna tabemos</h1>
-          <span>with Noa</span>
-        </div>
-        <img
-          height="50px"
-          width="50px"
-          className="logo"
-          src="/noatoon.png"
-        ></img>
-      </header>
+      <Link href="/">
+        <header>
+          <div className="title">
+            <h1>Minna tabemos</h1>
+            <span>with Noa</span>
+          </div>
+          <img
+            height="50px"
+            width="50px"
+            className="logo"
+            src="/noatoon.png"
+          ></img>
+        </header>
+      </Link>
       <div className="content">{children}</div>
       <style jsx global>{`
         body,
@@ -50,6 +53,7 @@ export const Layout: React.FC = ({ children }) => {
           border-radius: 50%;
         }
         header {
+          cursor: pointer;
           position: absolute;
           top: 0;
           left: 0;
@@ -62,6 +66,7 @@ export const Layout: React.FC = ({ children }) => {
           flex-direction: 'row';
         }
         .content {
+          text-align: center;
           margin-top: 30px;
         }
       `}</style>

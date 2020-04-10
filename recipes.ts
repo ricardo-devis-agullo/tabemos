@@ -9,7 +9,7 @@ type IngredientName =
   | 'sauce de poisson'
   | 'tomate cherry';
 
-interface Ingredient {
+export interface Ingredient {
   name: IngredientName;
   quantity: number;
   measurement: Measurement;
