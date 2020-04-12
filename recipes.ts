@@ -10,20 +10,20 @@ type IngredientName =
   | 'tomate cherry';
 
 export interface Ingredient {
-  name: IngredientName;
-  quantity: number;
-  measurement: Measurement;
+  readonly name: IngredientName;
+  readonly quantity: number;
+  readonly measurement: Measurement;
 }
 
 interface BaseRecipe {
-  title: string;
-  serving: number;
-  ingredients: Ingredient[];
-  steps: string[];
+  readonly title: string;
+  readonly serving: number;
+  ingredients: ReadonlyArray<Ingredient>;
+  steps: ReadonlyArray<string>;
 }
 
 export interface Recipe extends BaseRecipe {
-  slug: string;
+  readonly slug: string;
 }
 
 const baseRecipes: Record<string, BaseRecipe> = {
@@ -39,7 +39,7 @@ const baseRecipes: Record<string, BaseRecipe> = {
       { name: 'sauce de poisson', quantity: 1, measurement: 'cucharada' },
       { name: 'tomate cherry', quantity: 12, measurement: 'unidad' },
     ],
-    steps: [],
+    steps: ['Mezclar todo'],
   },
 };
 
