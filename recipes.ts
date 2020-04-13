@@ -2,10 +2,18 @@ type Measurement = 'gramo' | 'cucharada' | 'pellizco' | 'manojo' | 'unidad';
 
 type IngredientName =
   | 'limón'
+  | 'salmón'
+  | 'aguacate'
+  | 'arroz'
   | 'cilantro'
   | 'sal'
+  | 'azúcar'
   | 'pimienta negra'
   | 'aceite de sésamo'
+  | 'aceite de oliva'
+  | 'salsa de soja'
+  | 'sésamo'
+  | 'vinagre'
   | 'sauce de poisson'
   | 'tomate cherry';
 
@@ -15,11 +23,16 @@ export interface Ingredient {
   readonly measurement: Measurement;
 }
 
+interface Step {
+  readonly instruction: string;
+  readonly photo?: string;
+}
+
 interface BaseRecipe {
   readonly title: string;
   readonly serving: number;
-  ingredients: ReadonlyArray<Ingredient>;
-  steps: ReadonlyArray<string>;
+  readonly ingredients: ReadonlyArray<Ingredient>;
+  readonly steps: ReadonlyArray<Step>;
 }
 
 export interface Recipe extends BaseRecipe {
@@ -39,7 +52,23 @@ const baseRecipes: Record<string, BaseRecipe> = {
       { name: 'sauce de poisson', quantity: 1, measurement: 'cucharada' },
       { name: 'tomate cherry', quantity: 12, measurement: 'unidad' },
     ],
-    steps: ['Mezclar todo'],
+    steps: [{ instruction: 'Mezclar todo' }],
+  },
+  'asia-don': {
+    title: 'Asia don (donbori de salmón y aguacate)',
+    serving: 2,
+    ingredients: [
+      { name: 'aguacate', quantity: 1, measurement: 'unidad' },
+      { name: 'salmón', quantity: 150, measurement: 'gramo' },
+      { name: 'aceite de oliva', quantity: 2, measurement: 'cucharada' },
+      { name: 'vinagre', quantity: 1, measurement: 'cucharada' },
+      { name: 'limón', quantity: 1, measurement: 'cucharada' },
+      { name: 'azúcar', quantity: 1, measurement: 'cucharada' },
+      { name: 'salsa de soja', quantity: 1, measurement: 'cucharada' },
+      { name: 'sésamo', quantity: 1, measurement: 'cucharada' },
+      { name: 'pimienta negra', quantity: 1, measurement: 'pellizco' },
+    ],
+    steps: [],
   },
 };
 
