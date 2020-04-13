@@ -58,7 +58,7 @@ export const RecipeInstructions: React.FC<Props> = ({ recipe }) => {
       <div className="serving">
         <h3>Instrucciones</h3>
         {recipe.steps.map((step, idx) => (
-          <p key={idx}>{step}</p>
+          <p key={idx}>{step.instruction}</p>
         ))}
       </div>
       <style jsx>{`
