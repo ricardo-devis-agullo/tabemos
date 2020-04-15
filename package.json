@@ -4,9 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint src/**",
+    "lint": "eslint pages/** components/** scripts/**",
+    "checks": "ts-node --project scripts/tsconfig.json scripts/checks.ts",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "next",
+    "prebuild": "npm run lint && npm run checks",
     "build": "next build",
     "start": "next start"
   },

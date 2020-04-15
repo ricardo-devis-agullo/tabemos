@@ -52,7 +52,12 @@ const baseRecipes: Record<string, BaseRecipe> = {
       { name: 'sauce de poisson', quantity: 1, measurement: 'cucharada' },
       { name: 'tomate cherry', quantity: 12, measurement: 'unidad' },
     ],
-    steps: [{ instruction: 'Mezclar todo' }],
+    steps: [
+      {
+        instruction:
+          'Lavar el cilantro con agua y ponerlo en un bol. Echar los tomates, el limón exprimido, la sal, la pimienta negra, el aceite y la salsa y remover.',
+      },
+    ],
   },
   'asia-don': {
     title: 'Asia don (donbori de salmón y aguacate)',
@@ -68,7 +73,15 @@ const baseRecipes: Record<string, BaseRecipe> = {
       { name: 'sésamo', quantity: 1, measurement: 'cucharada' },
       { name: 'pimienta negra', quantity: 1, measurement: 'pellizco' },
     ],
-    steps: [],
+    steps: [
+      {
+        instruction: 'Cortar el aguacate en daditos, y lo mismo con el salmón.',
+      },
+      {
+        instruction:
+          'Preparar la salsa vertiendo en un bol el vinagre, el azucar, la salsa de soja.',
+      },
+    ],
   },
 };
 
