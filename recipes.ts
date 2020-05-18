@@ -1,4 +1,11 @@
-type Measurement = 'gramo' | 'cucharada' | 'pellizco' | 'manojo' | 'unidad';
+type Measurement =
+  | 'gramo'
+  | 'cucharada'
+  | 'cucharilla'
+  | 'pellizco'
+  | 'manojo'
+  | 'unidad'
+  | 'mililitro';
 
 type IngredientName =
   | 'limón'
@@ -7,14 +14,29 @@ type IngredientName =
   | 'arroz'
   | 'cilantro'
   | 'sal'
+  | 'agua'
+  | 'ajo'
+  | 'leche'
+  | 'sake'
+  | 'nata de cocinar'
+  | 'pastilla avecrem'
   | 'azúcar'
+  | 'mantequilla'
   | 'pimienta negra'
+  | 'pimienta blanca'
   | 'aceite de sésamo'
   | 'aceite de oliva'
+  | 'molleja de pollo'
   | 'salsa de soja'
   | 'sésamo'
+  | 'cerdo'
   | 'vinagre'
+  | 'vino blanco'
   | 'sauce de poisson'
+  | 'maíz'
+  | 'maicena'
+  | 'cebolla'
+  | 'cebollino'
   | 'tomate cherry';
 
 export interface Ingredient {
@@ -80,6 +102,94 @@ const baseRecipes: Record<string, BaseRecipe> = {
       {
         instruction:
           'Preparar la salsa vertiendo en un bol el vinagre, el azucar, la salsa de soja.',
+      },
+    ],
+  },
+  wat: {
+    title: 'Tiras de cerdo al limón',
+    serving: 2,
+    ingredients: [
+      { name: 'cerdo', quantity: 300, measurement: 'gramo' },
+      { name: 'agua', quantity: 100, measurement: 'mililitro' },
+      { name: 'limón', quantity: 1, measurement: 'unidad' },
+      { name: 'sal', quantity: 1, measurement: 'pellizco' },
+      { name: 'aceite de sésamo', quantity: 1, measurement: 'cucharilla' },
+      { name: 'ajo', quantity: 1, measurement: 'unidad' },
+      { name: 'maicena', quantity: 2, measurement: 'cucharilla' },
+      { name: 'pastilla avecrem', quantity: 1, measurement: 'unidad' },
+    ],
+    steps: [],
+  },
+  'sopa-de-maiz': {
+    title: 'Sopa de maíz',
+    serving: 4,
+    ingredients: [
+      { name: 'maíz', quantity: 300, measurement: 'gramo' },
+      { name: 'cebolla', quantity: 1 / 2, measurement: 'unidad' },
+      { name: 'mantequilla', quantity: 10, measurement: 'gramo' },
+      { name: 'vino blanco', quantity: 50, measurement: 'mililitro' },
+      { name: 'sal', quantity: 2, measurement: 'pellizco' },
+      { name: 'pimienta blanca', quantity: 1, measurement: 'pellizco' },
+      { name: 'agua', quantity: 225, measurement: 'mililitro' },
+      { name: 'leche', quantity: 125, measurement: 'mililitro' },
+      { name: 'nata de cocinar', quantity: 125, measurement: 'mililitro' },
+      { name: 'nata de cocinar', quantity: 125, measurement: 'mililitro' },
+      { name: 'pastilla avecrem', quantity: 1 / 4, measurement: 'unidad' },
+    ],
+    steps: [
+      {
+        instruction:
+          'Echamos en una olla la mantequilla a fuego medio y la cebolla cortada en juliana hasta que quede pocha (sin quemar).',
+      },
+      {
+        instruction: 'Echar el maíz, remover y dejarlo 2 minutos cocinando.',
+      },
+      {
+        instruction:
+          'Echar el vino, la sal y la pimienta. Subir el fuego hasta que se evapore.',
+      },
+      {
+        instruction:
+          'Echar el agua. Tapar la olla y dejarlo 5 minutos a fuego medio.',
+      },
+      {
+        instruction:
+          'Pasarlo todo por un triturador (puede usarse un colador luego si quiere dejar más suave).',
+      },
+      {
+        instruction: 'Añadir la leche, la nata y el avecrem y mezclar bien.',
+      },
+    ],
+  },
+  'mollejas-al-limon': {
+    title: 'Mollejas al limon',
+    serving: 2,
+    ingredients: [
+      { name: 'molleja de pollo', quantity: 300, measurement: 'gramo' },
+      { name: 'sal', quantity: 1, measurement: 'cucharada' },
+      { name: 'pimienta negra', quantity: 1, measurement: 'cucharada' },
+      { name: 'azúcar', quantity: 1, measurement: 'cucharada' },
+      { name: 'ajo', quantity: 1, measurement: 'unidad' },
+      { name: 'cebollino', quantity: 1, measurement: 'cucharilla' },
+      { name: 'sake', quantity: 1, measurement: 'cucharada' },
+      { name: 'limón', quantity: 1 / 4, measurement: 'unidad' },
+      { name: 'aceite de sésamo', quantity: 1, measurement: 'cucharada' },
+    ],
+    steps: [
+      {
+        instruction:
+          'Cortar las molleas por la mitad y hacer cortes en las partes blancas. Echar a un bol.',
+      },
+      {
+        instruction:
+          'En el bol echar la sal, el azucar, el ajo, el sake, el limon exprimido y el aceite. Remover y dejar reposar 10 minutos.',
+      },
+      {
+        instruction:
+          'Calentar en una sarten con aceite a fuego medio y echar el contenido del bol. Echar pimienta negra y dejar tapado 5 minutos.',
+      },
+      {
+        instruction: 'Echar cebollino picado por encima y servir.',
       },
     ],
   },
