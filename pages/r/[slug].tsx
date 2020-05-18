@@ -1,6 +1,6 @@
 import { NextPage, GetStaticPaths, GetStaticProps } from 'next';
-import { recipes, Recipe } from '../../recipes';
-import { RecipeInstructions } from '../../components/Recipe';
+import { recipes, Recipe } from 'recipes';
+import { RecipeInstructions } from '@components/Recipe';
 
 interface RecipeProps {
   recipe: Recipe;

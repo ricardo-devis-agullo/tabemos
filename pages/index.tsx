@@ -1,6 +1,6 @@
 import { NextPage, GetStaticProps } from 'next';
 import Link from 'next/link';
-import { recipes } from '../recipes';
+import { recipes } from '@recipes';
 
 interface SummaryRecipe {
   title: string;
