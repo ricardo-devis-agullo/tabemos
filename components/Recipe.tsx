@@ -27,6 +27,10 @@ function formatIngredient({ name, measurement, quantity }: Ingredient): string {
   switch (measurement) {
     case 'cucharada':
       return `${quantity} ${pluralize('cucharada', quantity)} de ${name}`;
+    case 'cucharilla':
+      return `${quantity} ${pluralize('cucharilla', quantity)} de ${name}`;
+    case 'mililitro':
+      return `${quantity} ${pluralize('mililitro', quantity)} de ${name}`;
     case 'gramo':
       return `${quantity}g de ${name}`;
     case 'manojo':

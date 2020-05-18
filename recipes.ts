@@ -105,7 +105,7 @@ const baseRecipes: Record<string, BaseRecipe> = {
       },
     ],
   },
-  wat: {
+  'tiras-de-cerdo-al-limon': {
     title: 'Tiras de cerdo al limón',
     serving: 2,
     ingredients: [
