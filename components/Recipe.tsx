@@ -1,4 +1,4 @@
-import { Recipe, Ingredient } from '@recipes';
+import { Recipe, Ingredient } from '../recipes';
 
 interface Props {
   recipe: Recipe;
