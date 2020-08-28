@@ -11,15 +11,21 @@ export const Layout: React.FC = ({ children }) => {
           key="google-font-cabin"
         />
       </Head>
-      <Link href="/">
-        <header>
+      <header>
+        <Link href="/">
           <div className="title">
             <h1>Minna tabemos</h1>
             <span>with Noa</span>
           </div>
+        </Link>
+        <a
+          href="https://www.instagram.com/minnaisho/"
+          target="_blank"
+          rel="noreferrer"
+        >
           <img height="80px" width="80px" className="logo" src="/noa.png"></img>
-        </header>
-      </Link>
+        </a>
+      </header>
       <div className="content">{children}</div>
       <style jsx global>{`
         ul,
