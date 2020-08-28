@@ -17,12 +17,7 @@ export const Layout: React.FC = ({ children }) => {
             <h1>Minna tabemos</h1>
             <span>with Noa</span>
           </div>
-          <img
-            height="50px"
-            width="50px"
-            className="logo"
-            src="/noatoon.png"
-          ></img>
+          <img height="80px" width="80px" className="logo" src="/noa.png"></img>
         </header>
       </Link>
       <div className="content">{children}</div>
@@ -48,6 +43,7 @@ export const Layout: React.FC = ({ children }) => {
         }
         a {
           color: #2ecc40;
+          text-decoration: none;
         }
       `}</style>
       <style jsx>{`
@@ -68,7 +64,6 @@ export const Layout: React.FC = ({ children }) => {
         .content {
           text-align: center;
           margin-top: 30px;
-          max-width: 40rem;
           padding: 2rem;
           margin: auto;
         }
