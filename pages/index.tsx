@@ -29,8 +29,8 @@ const RecipeCard: React.FC<{ recipe: SummaryRecipe }> = ({ recipe }) => {
               position: relative;
             }
             .card img {
-              width: 200px;
-              height: 400px;
+              width: 100%;
+              height: 100%;
               object-fit: cover;
             }
             .title {

@@ -8,13 +8,18 @@
     "checks": "ts-node --project scripts/tsconfig.json scripts/checks.ts",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "next",
-    "allchecks": "npm run lint && npm run checks",
+    "allchecks": "npm run lint && npm run checks && npm run build",
     "build": "next build",
     "start": "next start"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "dependencies": {
+    "next": "9.5.2",
+    "react": "16.13.1",
+    "react-dom": "16.13.1"
+  },
   "devDependencies": {
     "@types/node": "14.6.1",
     "@types/react": "16.9.48",
@@ -25,15 +30,16 @@
     "eslint-config-prettier": "6.11.0",
     "eslint-plugin-prettier": "3.1.4",
     "eslint-plugin-react": "7.20.6",
+    "husky": "^4.2.5",
     "node-dev": "5.2.0",
     "prettier": "2.1.1",
     "rimraf": "3.0.2",
     "ts-node": "9.0.0",
     "typescript": "4.0.2"
   },
-  "dependencies": {
-    "next": "9.5.2",
-    "react": "16.13.1",
-    "react-dom": "16.13.1"
+  "husky": {
+    "hooks": {
+      "pre-push": "npm run allchecks"
+    }
   }
 }
