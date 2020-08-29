@@ -1,6 +1,7 @@
 import { NextPage, GetStaticProps } from 'next';
 import Link from 'next/link';
 import { recipes } from '../recipes';
+import { WebP } from '../components/WebP';
 
 interface SummaryRecipe {
   title: string;
@@ -15,7 +16,7 @@ const RecipeCard: React.FC<{ recipe: SummaryRecipe }> = ({ recipe }) => {
   return (
     <Link href={`/r/${recipe.slug}`}>
       <div className="card">
-        <img src={`/${recipe.slug}.jpg`} />
+        <img src={`/${recipe.slug}-small.webp`} />
         <div className="title">
           <span>{recipe.title}</span>
         </div>

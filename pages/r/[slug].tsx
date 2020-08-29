@@ -9,7 +9,7 @@ interface RecipeProps {
 const RecipePage: NextPage<RecipeProps> = ({ recipe }) => {
   return (
     <>
-      <img width="303px" height="228px" src={`/${recipe.slug}.jpg`}></img>
+      <img width="303px" height="228px" src={`/${recipe.slug}.webp`}></img>
       <h1>{recipe.title}</h1>
       <RecipeInstructions recipe={recipe}></RecipeInstructions>
     </>
