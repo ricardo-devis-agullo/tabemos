@@ -1,6 +1,7 @@
 import { NextPage, GetStaticProps } from 'next';
 import Link from 'next/link';
 import { recipes } from '../recipes';
+import { WebP } from '../components/WebP';
 
 interface SummaryRecipe {
   title: string;
@@ -15,7 +16,14 @@ const RecipeCard: React.FC<{ recipe: SummaryRecipe }> = ({ recipe }) => {
   return (
     <Link href={`/r/${recipe.slug}`}>
       <div className="card">
-        <img src={`/${recipe.slug}-small.webp`} />
+        <WebP
+          src={`/${recipe.slug}-small.webp`}
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+          }}
+        />
         <div className="title">
           <span>{recipe.title}</span>
         </div>
@@ -27,11 +35,6 @@ const RecipeCard: React.FC<{ recipe: SummaryRecipe }> = ({ recipe }) => {
               width: 200px;
               margin: 10px;
               position: relative;
-            }
-            .card img {
-              width: 100%;
-              height: 100%;
-              object-fit: cover;
             }
             .title {
               display: flex;

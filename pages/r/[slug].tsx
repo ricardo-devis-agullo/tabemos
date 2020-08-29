@@ -1,6 +1,7 @@
 import { NextPage, GetStaticPaths, GetStaticProps } from 'next';
 import { recipes, Recipe } from '../../recipes';
 import { RecipeInstructions } from '../../components/Recipe';
+import { WebP } from '../../components/WebP';
 
 interface RecipeProps {
   recipe: Recipe;
@@ -9,7 +10,7 @@ interface RecipeProps {
 const RecipePage: NextPage<RecipeProps> = ({ recipe }) => {
   return (
     <>
-      <img width="303px" height="228px" src={`/${recipe.slug}.webp`}></img>
+      <WebP width="303px" height="228px" src={`/${recipe.slug}.webp`} />
       <h1>{recipe.title}</h1>
       <RecipeInstructions recipe={recipe}></RecipeInstructions>
     </>
