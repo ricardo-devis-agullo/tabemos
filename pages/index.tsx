@@ -1,7 +1,6 @@
 import { NextPage, GetStaticProps } from 'next';
 import Link from 'next/link';
 import { recipes } from '../recipes';
-import { WebP } from '../components/WebP';
 
 interface SummaryRecipe {
   title: string;
