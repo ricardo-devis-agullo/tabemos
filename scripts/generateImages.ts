@@ -27,8 +27,8 @@ for (const slug of Object.keys(recipes)) {
     if (!files.includes(photo)) {
       const image = fs.readFileSync(path.join(publicPath, mainPhoto));
       const newImage = photo.includes('-small')
-        ? sharp(image)
-        : sharp(image).resize(null, 400);
+        ? sharp(image).resize(null, 400)
+        : sharp(image);
       newImage.toFile(path.join(publicPath, photo));
     }
   }
