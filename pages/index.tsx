@@ -48,7 +48,7 @@ const RecipeCard: React.FC<{ recipe: SummaryRecipe }> = ({ recipe }) => {
               background-color: #e590c19e;
               transition: background-color 0.5s;
             }
-            .title:hover {
+            .card:hover .title {
               background-color: #e590c1;
             }
             .title span {
