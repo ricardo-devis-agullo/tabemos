@@ -13,12 +13,13 @@ export const WebP: React.FC<ImageProps> = ({
   style,
   fallback,
 }) => {
-  const altImage = fallback ?? src.replace('.webp', '.jpg');
+  const source = src.endsWith('.webp') ? src : `${src}.webp`;
+  const altImage = fallback ?? source.replace('.webp', '.jpg');
   const mimeType = altImage.endsWith('.png') ? 'image/png' : 'image/jpeg';
 
   return (
     <picture>
-      <source srcSet={src} type="image/webp" />
+      <source srcSet={source} type="image/webp" />
       <source srcSet={altImage} type={mimeType} />
       <img style={style} src={altImage} width={width} height={height} />
     </picture>
