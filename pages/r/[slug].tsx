@@ -10,7 +10,7 @@ interface RecipeProps {
 const RecipePage: NextPage<RecipeProps> = ({ recipe }) => {
   return (
     <>
-      <WebP width="303px" height="228px" src={`/${recipe.slug}.webp`} />
+      <WebP width="303px" height="228px" src={`/photos/${recipe.slug}.webp`} />
       <h1>{recipe.title}</h1>
       <RecipeInstructions recipe={recipe}></RecipeInstructions>
     </>

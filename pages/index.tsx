@@ -17,7 +17,7 @@ const RecipeCard: React.FC<{ recipe: SummaryRecipe }> = ({ recipe }) => {
     <Link href={`/r/${recipe.slug}`}>
       <div className="card">
         <WebP
-          src={`/${recipe.slug}-small.webp`}
+          src={`/photos/${recipe.slug}-small.webp`}
           style={{
             width: '100%',
             height: '100%',
