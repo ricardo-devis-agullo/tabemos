@@ -1,8 +1,7 @@
 import { NextPage, GetStaticProps } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import { recipes } from '../recipes';
-import { WebP } from '../components/WebP';
-import { getPhoto } from '../images';
 
 interface SummaryRecipe {
   title: string;
@@ -17,13 +16,15 @@ const RecipeCard: React.FC<{ recipe: SummaryRecipe }> = ({ recipe }) => {
   return (
     <Link href={`/r/${recipe.slug}`}>
       <div className="card">
-        <WebP
-          src={`/photos/${getPhoto(recipe.slug, '400x')}.webp`}
+        <Image
+          src={`/photos/${recipe.slug}.jpg`}
+          height={400}
           style={{
             width: '100%',
             height: '100%',
             objectFit: 'cover',
           }}
+          width={300}
         />
         <div className="title">
           <span>{recipe.title}</span>
