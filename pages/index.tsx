@@ -19,12 +19,12 @@ const RecipeCard: React.FC<{ recipe: SummaryRecipe }> = ({ recipe }) => {
         <Image
           src={`/photos/${recipe.slug}.jpg`}
           height={400}
+          width={200}
           style={{
             width: '100%',
             height: '100%',
             objectFit: 'cover',
           }}
-          width={300}
         />
         <div className="title">
           <span>{recipe.title}</span>
