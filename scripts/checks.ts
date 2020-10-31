@@ -1,3 +1,3 @@
-import { generateImages } from './images';
+import { checkImages } from './images';
 
-generateImages({ onlyCheck: true });
+checkImages();
