@@ -22,6 +22,7 @@ type IngredientName =
   | 'pastilla avecrem'
   | 'azúcar'
   | 'mantequilla'
+  | 'zanahoria'
   | 'pimienta negra'
   | 'pimienta blanca'
   | 'aceite de sésamo'
@@ -30,6 +31,7 @@ type IngredientName =
   | 'salsa de soja'
   | 'sésamo'
   | 'cerdo'
+  | 'patata'
   | 'vinagre'
   | 'vino blanco'
   | 'sauce de poisson'
@@ -190,6 +192,34 @@ const baseRecipes: Record<string, BaseRecipe> = {
       },
       {
         instruction: 'Echar cebollino picado por encima y servir.',
+      },
+    ],
+  },
+  nikujaga: {
+    title: 'Estofado de carne y patatas (Nikujaga)',
+    serving: 2,
+    ingredients: [
+      { name: 'patata', quantity: 2, measurement: 'unidad' },
+      { name: 'aceite de oliva', quantity: 1, measurement: 'cucharada' },
+      { name: 'cebolla', quantity: 1, measurement: 'unidad' },
+      { name: 'zanahoria', quantity: 1, measurement: 'unidad' },
+      { name: 'cerdo', quantity: 200, measurement: 'gramo' },
+      { name: 'salsa de soja', quantity: 2, measurement: 'cucharada' },
+      { name: 'azúcar', quantity: 1, measurement: 'cucharada' },
+      { name: 'vino blanco', quantity: 1, measurement: 'cucharada' },
+    ],
+    steps: [
+      {
+        instruction:
+          'Cortar la carne en rodajas finas en trozos pequeños, la cebolla en juliana, las zanahorias y las patatas en trozos medianos irregulares.',
+      },
+      {
+        instruction:
+          'Calientar una cucharada de aceite de oliva en una olla y freir la carne. Agregue el azúcar, la salsa de soja y el vino.',
+      },
+      {
+        instruction:
+          'Agregue las cebollas, las papatas y las zanahorias a la olla de 2, cubra con fuego medio y ¡estará listo en aproximadamente 20 minutos! Remover de vez en cuando.',
       },
     ],
   },
