@@ -18,7 +18,10 @@ type IngredientName =
   | 'cebolla'
   | 'cebollino'
   | 'cerdo'
+  | 'champiñón'
   | 'cilantro'
+  | 'dashi'
+  | 'huevo'
   | 'leche'
   | 'limón'
   | 'maicena'
@@ -36,6 +39,7 @@ type IngredientName =
   | 'sake'
   | 'sauce de poisson'
   | 'sésamo'
+  | 'surimi'
   | 'tomate cherry'
   | 'vinagre'
   | 'vino blanco'
@@ -180,7 +184,7 @@ const baseRecipes: Record<string, BaseRecipe> = {
     steps: [
       {
         instruction:
-          'Cortar las molleas por la mitad y hacer cortes en las partes blancas. Echar a un bol.',
+          'Cortar las mollejas por la mitad y hacer cortes en las partes blancas. Echar a un bol.',
       },
       {
         instruction:
@@ -211,7 +215,7 @@ const baseRecipes: Record<string, BaseRecipe> = {
     steps: [
       {
         instruction:
-          'Cortar la carne en rodajas finas en trozos pequeños, la cebolla en juliana, las zanahorias y las patatas en trozos medianos irregulares.',
+          'Cortar la carne en rodajas finas pequeñas, la cebolla en juliana, las zanahorias y las patatas en trozos medianos irregulares.',
       },
       {
         instruction:
@@ -219,7 +223,34 @@ const baseRecipes: Record<string, BaseRecipe> = {
       },
       {
         instruction:
-          'Agregue las cebollas, las papatas y las zanahorias a la olla de 2, cubra con fuego medio y ¡estará listo en aproximadamente 20 minutos! Remover de vez en cuando.',
+          'Agregar las cebollas, las papatas y las zanahorias a la olla, cubrir con fuego medio y ¡estará listo en aproximadamente 20 minutos! Remover de vez en cuando.',
+      },
+    ],
+  },
+  chawanmushi: {
+    title: 'Natillas de huevo al vapor (Chawanmushi)',
+    serving: 2,
+    ingredients: [
+      { name: 'huevo', quantity: 2, measurement: 'unidad' },
+      { name: 'agua', quantity: 330, measurement: 'mililitro' },
+      { name: 'dashi', quantity: 2, measurement: 'cucharilla' },
+      { name: 'sal', quantity: 1 / 4, measurement: 'cucharilla' },
+      { name: 'surimi', quantity: 6, measurement: 'unidad' },
+      { name: 'champiñón', quantity: 1, measurement: 'unidad' },
+    ],
+    steps: [
+      { instruction: 'Batimos los huevos en un bol' },
+      {
+        instruction:
+          'En otro bol preparamos el agua con el dashi, mezclamos, y terminamos echandolo en el bol con el huevo',
+      },
+      {
+        instruction:
+          'Ponemos en un vasito el champi y el surimi troceado, y luego el preparado del bol y tapamos el vaso con papel de aluminio para que se cueza.',
+      },
+      {
+        instruction:
+          'Hervir en una olla con cinco centimetros de agua, poniendo el vaso que repose sobre el agua. Primero 3 minutos a fuego fuerte, y luego 10 minutos a fuego lento con la olla tapada en todo momento.',
       },
     ],
   },
