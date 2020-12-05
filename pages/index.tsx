@@ -2,7 +2,6 @@ import { NextPage, GetStaticProps } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import { recipes } from '../recipes';
-import styles from './main.module.css';
 
 interface SummaryRecipe {
   title: string;
@@ -18,21 +17,21 @@ const RecipeCard: React.FC<{ recipe: SummaryRecipe }> = ({ recipe }) => {
     <Link href={`/r/${recipe.slug}`}>
       <div className="card">
         <Image
-          className={styles.cover}
+          className="cover"
           src={`/photos/${recipe.slug}.jpg`}
           height={1000}
           width={500}
-          style={{
-            width: '100%',
-            height: '100%',
-            objectFit: 'cover',
-          }}
+          objectFit="cover"
         />
         <div className="title">
           <span>{recipe.title}</span>
         </div>
         <style jsx>
           {`
+            .cover {
+              width: 100%;
+              height: 100%;
+            }
             .card {
               cursor: pointer;
               height: 400px;
