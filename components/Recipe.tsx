@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { Recipe, Ingredient } from '../recipes';
 
 interface Props {
@@ -62,7 +63,17 @@ export const RecipeInstructions: React.FC<Props> = ({ recipe }) => {
       <div className="serving">
         <h3>Instrucciones</h3>
         {recipe.steps.map((step, idx) => (
-          <p key={idx}>{step.instruction}</p>
+          <div key={idx}>
+            {step.photo && (
+              <Image
+                width={200}
+                height={150}
+                objectFit="cover"
+                src={`/photos/${recipe.slug}-${step.photo}.jpg`}
+              />
+            )}
+            <p>{step.instruction}</p>
+          </div>
         ))}
       </div>
       <style jsx>{`

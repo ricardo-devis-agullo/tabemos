@@ -243,14 +243,17 @@ const baseRecipes: Record<string, BaseRecipe> = {
       {
         instruction:
           'En otro bol preparamos el agua con el dashi, mezclamos, y terminamos echandolo en el bol con el huevo',
+        photo: 'cuenco',
       },
       {
         instruction:
           'Ponemos en un vasito el champi y el surimi troceado, y luego el preparado del bol y tapamos el vaso con papel de aluminio para que se cueza.',
+        photo: 'aluminio',
       },
       {
         instruction:
           'Hervir en una olla con cinco centimetros de agua, poniendo el vaso que repose sobre el agua. Primero 3 minutos a fuego fuerte, y luego 10 minutos a fuego lento con la olla tapada en todo momento.',
+        photo: 'olla',
       },
     ],
   },
