@@ -15,21 +15,48 @@ interface IndexProps {
 const RecipeCard: React.FC<{ recipe: SummaryRecipe }> = ({ recipe }) => {
   return (
     <Link href={`/r/${recipe.slug}`}>
-      <div className="card group m-2.5 relative cursor-pointer">
+      <div className="card">
         <Image
+          className="cover"
           src={`/photos/${recipe.slug}.jpg`}
           height={1000}
           width={500}
           objectFit="cover"
         />
-        <div className="title h-20 flex absolute bottom-0 w-full justify-center items-end bg-pink-400 group-hover:bg-pink-300 bg-opacity-60 transition-colors duration-500">
-          <span className="text-white pb-3">{recipe.title}</span>
+        <div className="title">
+          <span>{recipe.title}</span>
         </div>
         <style jsx>
           {`
+            .cover {
+              width: 100%;
+              height: 100%;
+            }
             .card {
+              cursor: pointer;
               height: 400px;
               width: 200px;
+              margin: 10px;
+              position: relative;
+            }
+            .title {
+              display: flex;
+              align-items: flex-end;
+              justify-content: center;
+              height: 80px;
+              width: 100%;
+              color: #000;
+              position: absolute;
+              bottom: 0;
+              background-color: #e590c19e;
+              transition: background-color 0.5s;
+            }
+            .card:hover .title {
+              background-color: #e590c1;
+            }
+            .title span {
+              padding-bottom: 10px;
+              color: #fff;
             }
           `}
         </style>
@@ -40,10 +67,16 @@ const RecipeCard: React.FC<{ recipe: SummaryRecipe }> = ({ recipe }) => {
 
 const Index: NextPage<IndexProps> = ({ recipes }) => {
   return (
-    <div className="flex flex-wrap">
+    <div className="recipes">
       {recipes.map((recipe) => (
         <RecipeCard key={recipe.slug} recipe={recipe} />
       ))}
+      <style jsx>{`
+        .recipes {
+          display: flex;
+          flex-wrap: wrap;
+        }
+      `}</style>
     </div>
   );
 };

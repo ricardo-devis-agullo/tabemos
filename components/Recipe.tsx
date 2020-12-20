@@ -49,7 +49,7 @@ export const RecipeInstructions: React.FC<Props> = ({ recipe }) => {
   return (
     <>
       <div className="serving">
-        <h3 className="inline-block text-xl m-4">Ingredientes</h3>
+        <h3>Ingredientes</h3>
         <span>{`(${recipe.serving} ${pluralize(
           'persona',
           recipe.serving
@@ -61,7 +61,7 @@ export const RecipeInstructions: React.FC<Props> = ({ recipe }) => {
         ))}
       </ul>
       <div className="serving">
-        <h3 className="text-xl m-4">Instrucciones</h3>
+        <h3>Instrucciones</h3>
         {recipe.steps.map((step, idx) => (
           <div key={idx}>
             {step.photo && (
@@ -76,6 +76,15 @@ export const RecipeInstructions: React.FC<Props> = ({ recipe }) => {
           </div>
         ))}
       </div>
+      <style jsx>{`
+        ul,
+        li {
+          list-style-type: none;
+        }
+        .serving h3 {
+          display: inline-block;
+        }
+      `}</style>
     </>
   );
 };
