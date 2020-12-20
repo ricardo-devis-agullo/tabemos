@@ -11,10 +11,10 @@ export const Layout: React.FC = ({ children }) => {
           key="google-font-cabin"
         />
       </Head>
-      <header>
+      <header className="flex cursor-pointer justify-center items-center w-full bg-pink-300">
         <Link href="/">
           <div className="title">
-            <h1>Minna tabemos</h1>
+            <h1 className="text-4xl">Minna tabemos</h1>
             <span>with Noa</span>
           </div>
         </Link>
@@ -23,10 +23,15 @@ export const Layout: React.FC = ({ children }) => {
           target="_blank"
           rel="noreferrer"
         >
-          <img height="80px" width="80px" className="logo" src="/noa.png"></img>
+          <img
+            height="80px"
+            width="80px"
+            className="ml-4 rounded-full"
+            src="/noa.png"
+          ></img>
         </a>
       </header>
-      <div className="content">{children}</div>
+      <div className="content text-center p-8">{children}</div>
       <style jsx global>{`
         ul,
         body,
@@ -53,25 +58,8 @@ export const Layout: React.FC = ({ children }) => {
         }
       `}</style>
       <style jsx>{`
-        .logo {
-          margin-left: 10px;
-          border-radius: 50%;
-        }
         header {
-          cursor: pointer;
-          width: 100%;
           font-family: 'Indie Flower', cursive;
-          background-color: #e590c1;
-          justify-content: center;
-          align-items: center;
-          display: flex;
-          flex-direction: 'row';
-        }
-        .content {
-          text-align: center;
-          margin-top: 30px;
-          padding: 2rem;
-          margin: auto;
         }
       `}</style>
     </>

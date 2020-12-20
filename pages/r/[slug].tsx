@@ -11,7 +11,7 @@ const RecipePage: NextPage<RecipeProps> = ({ recipe }) => {
   return (
     <>
       <Image width={303} height={228} src={`/photos/${recipe.slug}.jpg`} />
-      <h1>{recipe.title}</h1>
+      <h1 className="text-4xl">{recipe.title}</h1>
       <RecipeInstructions recipe={recipe}></RecipeInstructions>
     </>
   );

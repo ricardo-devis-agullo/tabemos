@@ -247,12 +247,12 @@ const baseRecipes: Record<string, BaseRecipe> = {
       },
       {
         instruction:
-          'Ponemos en un vasito el champi y el surimi troceado, y luego el preparado del bol y tapamos el vaso con papel de aluminio para que se cueza.',
+          'Ponemos en un vasito el champi y el surimi troceado, y luego el preparado del bol con la ayuda de un colador y tapamos el vaso con papel de aluminio para que se cueza.',
         photo: 'aluminio',
       },
       {
         instruction:
-          'Hervir en una olla con cinco centimetros de agua, poniendo el vaso que repose sobre el agua. Primero 3 minutos a fuego fuerte, y luego 10 minutos a fuego lento con la olla tapada en todo momento.',
+          'En una olla, poner unos cinco centimetros de agua y llevar a ebullición. Una vez hirviendo, poner el vaso que repose sobre el agua y tapar la olla. Calentar primero 3 minutos a fuego fuerte, y luego 10 minutos a fuego lento con la olla tapada en todo momento.',
         photo: 'olla',
       },
     ],
