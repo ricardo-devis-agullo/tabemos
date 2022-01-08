@@ -22,9 +22,11 @@ type IngredientName =
   | 'champiñón'
   | 'cilantro'
   | 'dashi'
+  | 'gamba'
   | 'huevo'
   | 'ketchup'
   | 'leche'
+  | 'leche de coco'
   | 'limón'
   | 'maicena'
   | 'maíz'
@@ -33,12 +35,14 @@ type IngredientName =
   | 'nata de cocinar'
   | 'nuez moscada'
   | 'panko'
+  | 'pasta tom yum'
   | 'pastilla avecrem'
   | 'patata'
   | 'pimienta blanca'
   | 'pimienta negra'
   | 'sal'
   | 'salmón'
+  | 'salsa de pescado'
   | 'salsa de soja'
   | 'salsa worcestershire'
   | 'sake'
@@ -309,6 +313,43 @@ const baseRecipes: Record<string, BaseRecipe> = {
         instruction:
           'Mezclar todos los ingredientes de la salsa y echar por encima en la sartén. Dejar calentar unos minutos.',
         photo: 'salsa',
+      },
+    ],
+  },
+  'tom-yum-kung': {
+    title: 'Tom Yum Kung (Sopa de gambas)',
+    serving: 2,
+    ingredients: [
+      { name: 'gamba', quantity: 4, measurement: 'unidad' },
+      { name: 'cebolla', quantity: 1 / 4, measurement: 'unidad' },
+      { name: 'tomate cherry', quantity: 4, measurement: 'unidad' },
+      { name: 'champiñón', quantity: 4, measurement: 'unidad' },
+      { name: 'ajo', quantity: 2, measurement: 'unidad' },
+      { name: 'agua', quantity: 400, measurement: 'mililitro' },
+      { name: 'limón', quantity: 1, measurement: 'cucharada' },
+      { name: 'aceite de oliva', quantity: 1, measurement: 'cucharada' },
+      { name: 'leche de coco', quantity: 50, measurement: 'mililitro' },
+      { name: 'pasta tom yum', quantity: 2, measurement: 'cucharada' },
+      { name: 'cilantro', quantity: 2, measurement: 'pellizco' },
+      { name: 'azúcar', quantity: 1, measurement: 'cucharilla' },
+      { name: 'salsa de pescado', quantity: 2, measurement: 'cucharilla' },
+    ],
+    steps: [
+      {
+        instruction:
+          'Cortar la cebolla en juliana, el champiñón en rodajas, los tomates cherry por la mitad y los ajos aplastados con la ayuda del cuchillo.',
+      },
+      {
+        instruction:
+          'Echar en una cazuela con aciete el ajo, y cuando coja color echar la cebolla, seguido de los champiñónes y las gambas sin cabeza (y con piel)',
+      },
+      {
+        instruction:
+          'Cuando la gamba este roja, echar el tomate, el agua, la pasta tom yum, la salsa de pescado, el azúcar y dejar cocinar a fuego medio durante unos minutos.',
+      },
+      {
+        instruction:
+          'Echar la leche de coco y el limón exprimido. Remover un poco y servir con un poco de cilantro cortado por encima.',
       },
     ],
   },
