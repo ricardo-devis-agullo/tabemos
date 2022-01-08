@@ -293,18 +293,22 @@ const baseRecipes: Record<string, BaseRecipe> = {
       {
         instruction:
           'Con carne picada de cerdo (o mezcla), picar la cebolla (sofreirla un poco) y echar todos los ingredientes en una sarten directamente (el huevo directamente, sin batir).',
+        photo: 'sarten',
       },
       {
         instruction:
           'Mezclar con la mano todos los ingredientes dentro de la sartén hasta que quede pegajoso, y entonces separar la masa y darle forma.',
+        photo: 'forma',
       },
       {
         instruction:
           'Poner a calentar a fuego medio hasta que cada parte quede bien hecha, con la sartén tapada.',
+        photo: 'hecho',
       },
       {
         instruction:
           'Mezclar todos los ingredientes de la salsa y echar por encima en la sartén. Dejar calentar unos minutos.',
+        photo: 'salsa',
       },
     ],
   },
