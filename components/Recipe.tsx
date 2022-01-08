@@ -20,6 +20,14 @@ function formatUnit(unit: number): string {
   }
 }
 
+function areIngredientsBySection(
+  ingredients:
+    | ReadonlyArray<Ingredient>
+    | Record<string, ReadonlyArray<Ingredient>>
+): ingredients is Record<string, ReadonlyArray<Ingredient>> {
+  return !Array.isArray(ingredients);
+}
+
 function pluralize(word: string, count: number): string {
   return count > 1 ? `${word}s` : word;
 }
@@ -40,6 +48,8 @@ function formatIngredient({ name, measurement, quantity }: Ingredient): string {
       return `${quantity} ${pluralize('pellizco', quantity)} de ${name}`;
     case 'unidad':
       return `${formatUnit(quantity)} ${name}`;
+    case 'vaso':
+      return `${quantity} ${pluralize('vaso', quantity)} de ${name}`;
     default:
       return assertNever(measurement);
   }
@@ -55,11 +65,24 @@ export const RecipeInstructions: React.FC<Props> = ({ recipe }) => {
           recipe.serving
         )})`}</span>
       </div>
-      <ul>
-        {recipe.ingredients.map((ingredient) => (
-          <li key={ingredient.name}>{formatIngredient(ingredient)}</li>
-        ))}
-      </ul>
+      {!areIngredientsBySection(recipe.ingredients) ? (
+        <ul>
+          {recipe.ingredients.map((ingredient) => (
+            <li key={ingredient.name}>{formatIngredient(ingredient)}</li>
+          ))}
+        </ul>
+      ) : (
+        Object.entries(recipe.ingredients).map(([section, ingredients]) => (
+          <div key={section}>
+            <h5>{section}</h5>
+            <ul>
+              {ingredients.map((ingredient) => (
+                <li key={ingredient.name}>{formatIngredient(ingredient)}</li>
+              ))}
+            </ul>
+          </div>
+        ))
+      )}
       <div className="serving">
         <h3>Instrucciones</h3>
         {recipe.steps.map((step, idx) => (

@@ -5,7 +5,8 @@ type Measurement =
   | 'pellizco'
   | 'manojo'
   | 'unidad'
-  | 'mililitro';
+  | 'mililitro'
+  | 'vaso';
 
 type IngredientName =
   | 'aceite de oliva'
@@ -22,6 +23,7 @@ type IngredientName =
   | 'cilantro'
   | 'dashi'
   | 'huevo'
+  | 'ketchup'
   | 'leche'
   | 'limón'
   | 'maicena'
@@ -29,6 +31,8 @@ type IngredientName =
   | 'mantequilla'
   | 'molleja de pollo'
   | 'nata de cocinar'
+  | 'nuez moscada'
+  | 'panko'
   | 'pastilla avecrem'
   | 'patata'
   | 'pimienta blanca'
@@ -36,6 +40,7 @@ type IngredientName =
   | 'sal'
   | 'salmón'
   | 'salsa de soja'
+  | 'salsa worcestershire'
   | 'sake'
   | 'sauce de poisson'
   | 'sésamo'
@@ -59,7 +64,9 @@ interface Step {
 interface BaseRecipe {
   readonly title: string;
   readonly serving: number;
-  readonly ingredients: ReadonlyArray<Ingredient>;
+  readonly ingredients:
+    | ReadonlyArray<Ingredient>
+    | Record<string, ReadonlyArray<Ingredient>>;
   readonly steps: ReadonlyArray<Step>;
 }
 
@@ -254,6 +261,50 @@ const baseRecipes: Record<string, BaseRecipe> = {
         instruction:
           'En una olla, poner unos cinco centimetros de agua y llevar a ebullición. Una vez hirviendo, poner el vaso que repose sobre el agua y tapar la olla. Calentar primero 3 minutos a fuego fuerte, y luego 10 minutos a fuego lento con la olla tapada en todo momento.',
         photo: 'olla',
+      },
+    ],
+  },
+  hanbagu: {
+    title: 'Hamburguesa sencilla (hanbagu)',
+    serving: 2,
+    ingredients: {
+      hamburguesa: [
+        {
+          name: 'cerdo',
+          quantity: 600,
+          measurement: 'gramo',
+        },
+        { name: 'panko', quantity: 1, measurement: 'vaso' },
+        { name: 'huevo', quantity: 2, measurement: 'unidad' },
+        { name: 'cebolla', quantity: 1, measurement: 'unidad' },
+        { name: 'sal', quantity: 1, measurement: 'cucharilla' },
+        { name: 'pimienta negra', quantity: 1, measurement: 'cucharilla' },
+        { name: 'nuez moscada', quantity: 1, measurement: 'cucharilla' },
+        { name: 'aceite de oliva', quantity: 1, measurement: 'cucharilla' },
+        { name: 'leche', quantity: 40, measurement: 'mililitro' },
+      ],
+      salsa: [
+        { name: 'agua', quantity: 50, measurement: 'mililitro' },
+        { name: 'ketchup', quantity: 3, measurement: 'cucharada' },
+        { name: 'salsa worcestershire', quantity: 2, measurement: 'cucharada' },
+      ],
+    },
+    steps: [
+      {
+        instruction:
+          'Con carne picada de cerdo (o mezcla), picar la cebolla (sofreirla un poco) y echar todos los ingredientes en una sarten directamente (el huevo directamente, sin batir).',
+      },
+      {
+        instruction:
+          'Mezclar con la mano todos los ingredientes dentro de la sartén hasta que quede pegajoso, y entonces separar la masa y darle forma.',
+      },
+      {
+        instruction:
+          'Poner a calentar a fuego medio hasta que cada parte quede bien hecha, con la sartén tapada.',
+      },
+      {
+        instruction:
+          'Mezclar todos los ingredientes de la salsa y echar por encima en la sartén. Dejar calentar unos minutos.',
       },
     ],
   },
