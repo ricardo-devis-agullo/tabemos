@@ -14,6 +14,7 @@ type IngredientName =
   | 'agua'
   | 'aguacate'
   | 'ajo'
+  | 'alitas de pollo'
   | 'arroz'
   | 'azúcar'
   | 'cebolla'
@@ -23,14 +24,17 @@ type IngredientName =
   | 'cilantro'
   | 'dashi'
   | 'gamba'
+  | 'gochujang'
   | 'huevo'
   | 'ketchup'
   | 'leche'
   | 'leche de coco'
+  | 'lechuga'
   | 'limón'
   | 'maicena'
   | 'maíz'
   | 'mantequilla'
+  | 'mirin'
   | 'molleja de pollo'
   | 'nata de cocinar'
   | 'nuez moscada'
@@ -350,6 +354,39 @@ const baseRecipes: Record<string, BaseRecipe> = {
       {
         instruction:
           'Echar la leche de coco y el limón exprimido. Remover un poco y servir con un poco de cilantro cortado por encima.',
+      },
+    ],
+  },
+  'pollo-yangnyeom': {
+    title: 'Pollo Yangnyeom',
+    serving: 2,
+    ingredients: [
+      { name: 'alitas de pollo', quantity: 12, measurement: 'unidad' },
+      { name: 'maicena', quantity: 2, measurement: 'cucharada' },
+      { name: 'lechuga', quantity: 1, measurement: 'manojo' },
+      { name: 'cebollino', quantity: 1, measurement: 'pellizco' },
+      { name: 'gochujang', quantity: 2, measurement: 'cucharada' },
+      { name: 'ketchup', quantity: 2, measurement: 'cucharada' },
+      { name: 'aceite de sésamo', quantity: 1, measurement: 'cucharada' },
+      { name: 'mirin', quantity: 1, measurement: 'cucharada' },
+      { name: 'azúcar', quantity: 1, measurement: 'cucharada' },
+    ],
+    steps: [
+      {
+        instruction:
+          'Echar en un bol el gochujang, ketchup, aceite de sésamo, mirin y el azucar y remover bien para tener nuestra salsa.',
+      },
+      {
+        instruction:
+          'Espolvorear la harina en las alitas y echar a una sarten (sin aceite) hasta que esté hecha por los dos lados.',
+      },
+      {
+        instruction:
+          'Echar la salsa junto al pollo, mezclar y dejar calentar unos minutos hasta que la salsa ligue con la carne.',
+      },
+      {
+        instruction:
+          'En un plato poner la lechuga cortada y echar encima la carne de la sartén. Espolvorear por encima el cebollino.',
       },
     ],
   },
