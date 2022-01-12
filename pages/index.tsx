@@ -1,7 +1,7 @@
-import { NextPage, GetStaticProps } from 'next';
+import { value NextPage, value GetStaticProps } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
-import { recipes } from '../recipes';
+import { value recipes } from '../recipes';
 
 interface SummaryRecipe {
   title: string;
@@ -75,6 +75,7 @@ const Index: NextPage<IndexProps> = ({ recipes }) => {
         .recipes {
           display: flex;
           flex-wrap: wrap;
+          justify-content: center;
         }
       `}</style>
     </div>
