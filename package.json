@@ -11,7 +11,8 @@
     "dev": "next",
     "allchecks": "npm run lint && npm run checks && npm run build",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "prepare": "husky install"
   },
   "keywords": [],
   "author": "",
