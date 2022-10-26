@@ -11,10 +11,13 @@ type Measurement =
 type IngredientName =
   | 'aceite de oliva'
   | 'aceite de sésamo'
+  | 'aceituna negra'
   | 'agua'
   | 'aguacate'
   | 'ajo'
+  | 'alcaparra'
   | 'alitas de pollo'
+  | 'almeja'
   | 'arroz'
   | 'azúcar'
   | 'cebolla'
@@ -23,6 +26,7 @@ type IngredientName =
   | 'champiñón'
   | 'cilantro'
   | 'dashi'
+  | 'dorada'
   | 'gamba'
   | 'gochujang'
   | 'huevo'
@@ -387,6 +391,41 @@ const baseRecipes: Record<string, BaseRecipe> = {
       {
         instruction:
           'En un plato poner la lechuga cortada y echar encima la carne de la sartén. Espolvorear por encima el cebollino.',
+      },
+    ],
+  },
+  'acqua-pazza': {
+    title: 'Acqua pazza',
+    ingredients: [
+      { name: 'dorada', measurement: 'unidad', quantity: 1 },
+      { name: 'aceituna negra', measurement: 'unidad', quantity: 12 },
+      { name: 'tomate cherry', measurement: 'unidad', quantity: 8 },
+      { name: 'alcaparra', measurement: 'unidad', quantity: 8 },
+      { name: 'vino blanco', measurement: 'mililitro', quantity: 50 },
+      { name: 'almeja', measurement: 'unidad', quantity: 10 },
+      { name: 'aceite de oliva', measurement: 'cucharada', quantity: 1 },
+    ],
+    serving: 2,
+    steps: [
+      {
+        instruction:
+          'Echar sal a la dorada y dejar que permee por 5 minutos por lo menos. A la vez, lava las almejas y los tomates.',
+      },
+      {
+        instruction:
+          'Echar el ajo en una sarten grande con el aceite de oliva. Cuando esté hecho, poner la dorada y dorarla por los dos lados a fuego medio.',
+      },
+      {
+        instruction:
+          'Echar las almejas, los tomates y el vino. Tapar la sarten y esperar 3 minutos.',
+      },
+      {
+        instruction:
+          'Echar las aceitunas, las alcaparras, un poco de romero y volver a tapar por 3 minutos.',
+      },
+      {
+        instruction:
+          'Sacarlo de la sarten y espolvorear con sal, pimienta negra y aceite.',
       },
     ],
   },
