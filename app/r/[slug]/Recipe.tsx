@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { Recipe, Ingredient } from '../recipes';
+import { Recipe, Ingredient } from '../../../recipes';
 
 interface Props {
   recipe: Recipe;
@@ -21,9 +21,7 @@ function formatUnit(unit: number): string {
 }
 
 function areIngredientsBySection(
-  ingredients:
-    | ReadonlyArray<Ingredient>
-    | Record<string, ReadonlyArray<Ingredient>>
+  ingredients: ReadonlyArray<Ingredient> | Record<string, ReadonlyArray<Ingredient>>
 ): ingredients is Record<string, ReadonlyArray<Ingredient>> {
   return !Array.isArray(ingredients);
 }
@@ -59,11 +57,8 @@ export const RecipeInstructions: React.FC<Props> = ({ recipe }) => {
   return (
     <>
       <div className="serving">
-        <h3>Ingredientes</h3>
-        <span>{`(${recipe.serving} ${pluralize(
-          'persona',
-          recipe.serving
-        )})`}</span>
+        <h3 className="my-6 text-xl inline-block">Ingredientes</h3>
+        <span>{`(${recipe.serving} ${pluralize('persona', recipe.serving)})`}</span>
       </div>
       {!areIngredientsBySection(recipe.ingredients) ? (
         <ul>
@@ -75,7 +70,7 @@ export const RecipeInstructions: React.FC<Props> = ({ recipe }) => {
         Object.entries(recipe.ingredients).map(([section, ingredients]) => (
           <div key={section}>
             <h5>{section}</h5>
-            <ul>
+            <ul className="list-none">
               {ingredients.map((ingredient) => (
                 <li key={ingredient.name}>{formatIngredient(ingredient)}</li>
               ))}
@@ -84,14 +79,15 @@ export const RecipeInstructions: React.FC<Props> = ({ recipe }) => {
         ))
       )}
       <div className="serving">
-        <h3>Instrucciones</h3>
+        <h3 className="inline-block text-xl my-6">Instrucciones</h3>
         {recipe.steps.map((step, idx) => (
           <div key={idx}>
             {step.photo && (
               <Image
                 width={200}
                 height={150}
-                objectFit="cover"
+                className="object-cover"
+                alt="Recipe"
                 src={`/photos/${recipe.slug}-${step.photo}.jpg`}
               />
             )}
@@ -99,15 +95,6 @@ export const RecipeInstructions: React.FC<Props> = ({ recipe }) => {
           </div>
         ))}
       </div>
-      <style jsx>{`
-        ul,
-        li {
-          list-style-type: none;
-        }
-        .serving h3 {
-          display: inline-block;
-        }
-      `}</style>
     </>
   );
 };
