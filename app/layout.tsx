@@ -5,7 +5,11 @@ import { Indie_Flower } from '@next/font/google';
 
 const indieFlower = Indie_Flower({ weight: '400' });
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
       <head>
@@ -23,11 +27,26 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <span>with Noa</span>
             </div>
           </Link>
-          <a href="https://www.instagram.com/minnaisho/" target="_blank" rel="noreferrer">
-            <Image alt="logo" height={80} width={80} className="ml-3 rounded-full" src="/noa.png" />
+          <a
+            href="https://www.instagram.com/minnaisho/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Image
+              alt="logo"
+              height={80}
+              width={80}
+              className="ml-3 rounded-full"
+              src="/noa.png"
+            />
           </a>
         </header>
         <div className="text-center mt-7 p-8 m-auto">{children}</div>
+        <footer className="bg-gray-800 flex p-2 text-white justify-center">
+          <a rel="me" href="https://fosstodon.org/@ricardodevis">
+            Follow me on Mastodon
+          </a>
+        </footer>
       </body>
     </html>
   );
