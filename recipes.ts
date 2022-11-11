@@ -30,6 +30,7 @@ type IngredientName =
   | 'gamba'
   | 'gochujang'
   | 'huevo'
+  | 'jengibre'
   | 'ketchup'
   | 'leche'
   | 'leche de coco'
@@ -48,6 +49,8 @@ type IngredientName =
   | 'patata'
   | 'pimienta blanca'
   | 'pimienta negra'
+  | 'pollo concentrado'
+  | 'puerro'
   | 'sal'
   | 'salmón'
   | 'salsa de pescado'
@@ -57,6 +60,7 @@ type IngredientName =
   | 'sauce de poisson'
   | 'sésamo'
   | 'surimi'
+  | 'toban djan'
   | 'tomate cherry'
   | 'vinagre'
   | 'vino blanco'
@@ -396,6 +400,7 @@ const baseRecipes: Record<string, BaseRecipe> = {
   },
   'acqua-pazza': {
     title: 'Acqua pazza',
+    serving: 2,
     ingredients: [
       { name: 'dorada', measurement: 'unidad', quantity: 1 },
       { name: 'aceituna negra', measurement: 'unidad', quantity: 12 },
@@ -405,7 +410,6 @@ const baseRecipes: Record<string, BaseRecipe> = {
       { name: 'almeja', measurement: 'unidad', quantity: 10 },
       { name: 'aceite de oliva', measurement: 'cucharada', quantity: 1 },
     ],
-    serving: 2,
     steps: [
       {
         instruction:
@@ -426,6 +430,55 @@ const baseRecipes: Record<string, BaseRecipe> = {
       {
         instruction:
           'Sacarlo de la sarten y espolvorear con sal, pimienta negra y aceite.',
+      },
+    ],
+  },
+  'ebi-chili': {
+    title: 'Gambas picantes (ebi chili)',
+    serving: 2,
+    ingredients: {
+      main: [
+        { name: 'gamba', quantity: 16, measurement: 'unidad' },
+        { name: 'jengibre', quantity: 1, measurement: 'cucharilla' },
+        { name: 'sal', quantity: 1, measurement: 'cucharilla' },
+        { name: 'pimienta negra', quantity: 1, measurement: 'cucharilla' },
+        { name: 'maicena', quantity: 1, measurement: 'cucharada' },
+        { name: 'aceite de oliva', quantity: 1, measurement: 'cucharada' },
+        { name: 'puerro', quantity: 2, measurement: 'cucharada' },
+        { name: 'toban djan', quantity: 1, measurement: 'cucharilla' },
+      ],
+      salsa: [
+        { name: 'ketchup', quantity: 3, measurement: 'cucharada' },
+        { name: 'sake', quantity: 1, measurement: 'cucharada' },
+        { name: 'aceite de sésamo', quantity: 1 / 2, measurement: 'cucharada' },
+        { name: 'azúcar', quantity: 2, measurement: 'cucharilla' },
+        {
+          name: 'pollo concentrado',
+          quantity: 1 / 2,
+          measurement: 'cucharilla',
+        },
+        { name: 'salsa de soja', quantity: 1, measurement: 'cucharilla' },
+        { name: 'agua', quantity: 4, measurement: 'cucharada' },
+        { name: 'ajo', quantity: 1, measurement: 'cucharilla' },
+        { name: 'jengibre', quantity: 1, measurement: 'cucharilla' },
+        { name: 'sal', quantity: 1, measurement: 'cucharilla' },
+        { name: 'pimienta negra', quantity: 1, measurement: 'cucharilla' },
+      ],
+    },
+    steps: [
+      { instruction: 'Cortar el puerro y rallar el ajo y el jengibre.' },
+      { instruction: 'Mezclar los ingredientes de la salsa en un bol' },
+      {
+        instruction:
+          'Pelar las gambas y limpiarlas. Espolvorear con la maicena y echar a una sarten hirviendo con aceite.',
+      },
+      {
+        instruction:
+          'Cuando las gambas cojan color, echar el puerro y el toban djan.',
+      },
+      {
+        instruction:
+          'Echar la salsa, y calentar a fuego medio/bajo hasta que espese. Servir y listo.',
       },
     ],
   },
