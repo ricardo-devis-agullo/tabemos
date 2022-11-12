@@ -6,6 +6,7 @@ type Measurement =
   | 'manojo'
   | 'unidad'
   | 'mililitro'
+  | 'litro'
   | 'vaso';
 
 type IngredientName =
@@ -19,14 +20,17 @@ type IngredientName =
   | 'alitas de pollo'
   | 'almeja'
   | 'arroz'
+  | 'arroz integral'
   | 'azúcar'
   | 'cebolla'
   | 'cebollino'
   | 'cerdo'
   | 'champiñón'
   | 'cilantro'
+  | 'col china'
   | 'dashi'
   | 'dorada'
+  | 'enoki'
   | 'gamba'
   | 'gochujang'
   | 'huevo'
@@ -50,6 +54,7 @@ type IngredientName =
   | 'pimienta blanca'
   | 'pimienta negra'
   | 'pollo concentrado'
+  | 'ponzu'
   | 'puerro'
   | 'sal'
   | 'salmón'
@@ -59,6 +64,8 @@ type IngredientName =
   | 'sake'
   | 'sauce de poisson'
   | 'sésamo'
+  | 'shiitake'
+  | 'shimeji'
   | 'surimi'
   | 'toban djan'
   | 'tomate cherry'
@@ -79,6 +86,7 @@ interface Step {
 
 interface BaseRecipe {
   readonly title: string;
+  readonly draft?: boolean;
   readonly serving: number;
   readonly ingredients:
     | ReadonlyArray<Ingredient>
@@ -482,14 +490,74 @@ const baseRecipes: Record<string, BaseRecipe> = {
       },
     ],
   },
+  nabe: {
+    title: 'Nabe',
+    serving: 3,
+    ingredients: [
+      { name: 'agua', quantity: 1, measurement: 'litro' },
+      { name: 'dashi', quantity: 15, measurement: 'gramo' },
+      { name: 'puerro', quantity: 1, measurement: 'unidad' },
+      { name: 'col china', quantity: 1 / 2, measurement: 'unidad' },
+      { name: 'shimeji', quantity: 1, measurement: 'manojo' },
+      { name: 'enoki', quantity: 1, measurement: 'manojo' },
+      { name: 'shiitake', quantity: 4, measurement: 'unidad' },
+      { name: 'alitas de pollo', quantity: 6, measurement: 'unidad' },
+    ],
+    steps: [
+      {
+        instruction:
+          'Cortar en cortes diagonales de un palmo el puerro y la col china. Hacer un par de cortes al enoki y al shimeji y lo mismo con el shiitake. Cortar las alitas por la mitad.',
+      },
+      {
+        instruction:
+          'En la cazuela echar el agua y calentar con el dashi unos minutos.',
+      },
+      {
+        instruction:
+          'Echar el resto de ingredientes menos el ponzu a fuego alto y tapar la cazuela durante 20 minutos. Vigilar bien y bajar el fuego si es necesario.',
+      },
+      {
+        instruction:
+          'Servir con un plato de ponzu donde ir pasando los alimentos.',
+        photo: 'ponzu',
+      },
+    ],
+  },
+  'sopa-de-alitas': {
+    draft: true,
+    title: 'Sopa de alitas',
+    serving: 2,
+    ingredients: [
+      { name: 'agua', quantity: 600, measurement: 'mililitro' },
+      { name: 'alitas de pollo', quantity: 10, measurement: 'unidad' },
+      { name: 'vino blanco', quantity: 100, measurement: 'mililitro' },
+      { name: 'ajo', quantity: 2, measurement: 'unidad' },
+      { name: 'jengibre', quantity: 1, measurement: 'cucharada' },
+      { name: 'puerro', quantity: 2, measurement: 'cucharada' },
+      { name: 'sal', quantity: 1, measurement: 'cucharada' },
+      { name: 'arroz integral', quantity: 3, measurement: 'cucharada' },
+    ],
+    steps: [
+      {
+        instruction:
+          'En una olla a presión echar todos los ingredientes y calentar 10 minutos.',
+      },
+      {
+        instruction:
+          'Destapar y calentar a fuego medio para reducir el caldo. Ajustar de sal si necesario.',
+      },
+    ],
+  },
 };
 
 export const recipes: Record<string, Recipe> = Object.fromEntries(
-  Object.entries(baseRecipes).map(([slug, baseRecipe]) => [
-    slug,
-    {
-      ...baseRecipe,
+  Object.entries(baseRecipes)
+    .filter(([_, { draft }]) => !draft)
+    .map(([slug, baseRecipe]) => [
       slug,
-    },
-  ])
+      {
+        ...baseRecipe,
+        slug,
+      },
+    ])
 );

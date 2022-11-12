@@ -21,7 +21,9 @@ function formatUnit(unit: number): string {
 }
 
 function areIngredientsBySection(
-  ingredients: ReadonlyArray<Ingredient> | Record<string, ReadonlyArray<Ingredient>>
+  ingredients:
+    | ReadonlyArray<Ingredient>
+    | Record<string, ReadonlyArray<Ingredient>>
 ): ingredients is Record<string, ReadonlyArray<Ingredient>> {
   return !Array.isArray(ingredients);
 }
@@ -38,6 +40,8 @@ function formatIngredient({ name, measurement, quantity }: Ingredient): string {
       return `${quantity} ${pluralize('cucharilla', quantity)} de ${name}`;
     case 'mililitro':
       return `${quantity} ${pluralize('mililitro', quantity)} de ${name}`;
+    case 'litro':
+      return `${quantity} ${pluralize('litro', quantity)} de ${name}`;
     case 'gramo':
       return `${quantity}g de ${name}`;
     case 'manojo':
@@ -58,7 +62,10 @@ export const RecipeInstructions: React.FC<Props> = ({ recipe }) => {
     <>
       <div className="serving">
         <h3 className="my-6 text-xl inline-block">Ingredientes</h3>
-        <span>{`(${recipe.serving} ${pluralize('persona', recipe.serving)})`}</span>
+        <span>{`(${recipe.serving} ${pluralize(
+          'persona',
+          recipe.serving
+        )})`}</span>
       </div>
       {!areIngredientsBySection(recipe.ingredients) ? (
         <ul>
