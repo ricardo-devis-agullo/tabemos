@@ -550,7 +550,7 @@ const baseRecipes: Record<string, BaseRecipe> = {
   },
 };
 
-export const recipes: Record<string, Recipe> = Object.fromEntries(
+export const recipes: Map<string, Recipe> = new Map(
   Object.entries(baseRecipes)
     .filter(([_, { draft }]) => !draft)
     .map(([slug, baseRecipe]) => [

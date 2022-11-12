@@ -27,14 +27,9 @@ const RecipeCard: React.FC<{ recipe: SummaryRecipe }> = ({ recipe }) => {
 };
 
 export default function Home() {
-  const summaryRecipes = Object.entries(recipes).map(([slug, recipe]) => ({
-    title: recipe.title,
-    slug,
-  }));
-
   return (
     <div className="flex flex-wrap justify-center">
-      {summaryRecipes.map((recipe) => (
+      {[...recipes.values()].map((recipe) => (
         <RecipeCard key={recipe.slug} recipe={recipe} />
       ))}
     </div>
