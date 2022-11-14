@@ -170,7 +170,6 @@ const baseRecipes: Record<string, BaseRecipe> = {
       { name: 'agua', quantity: 225, measurement: 'mililitro' },
       { name: 'leche', quantity: 125, measurement: 'mililitro' },
       { name: 'nata de cocinar', quantity: 125, measurement: 'mililitro' },
-      { name: 'nata de cocinar', quantity: 125, measurement: 'mililitro' },
       { name: 'pastilla avecrem', quantity: 1 / 4, measurement: 'unidad' },
     ],
     steps: [
