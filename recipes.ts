@@ -17,6 +17,7 @@ type IngredientName =
   | 'aguacate'
   | 'ajo'
   | 'alcaparra'
+  | 'alga'
   | 'alitas de pollo'
   | 'almeja'
   | 'arroz'
@@ -33,6 +34,7 @@ type IngredientName =
   | 'enoki'
   | 'gamba'
   | 'gochujang'
+  | 'grasa de pollo'
   | 'huevo'
   | 'jengibre'
   | 'ketchup'
@@ -43,6 +45,7 @@ type IngredientName =
   | 'maicena'
   | 'maíz'
   | 'mantequilla'
+  | 'miel'
   | 'mirin'
   | 'molleja de pollo'
   | 'nata de cocinar'
@@ -58,6 +61,7 @@ type IngredientName =
   | 'puerro'
   | 'sal'
   | 'salmón'
+  | 'salsa de ostras'
   | 'salsa de pescado'
   | 'salsa de soja'
   | 'salsa worcestershire'
@@ -67,6 +71,7 @@ type IngredientName =
   | 'shiitake'
   | 'shimeji'
   | 'surimi'
+  | 'tallarines'
   | 'toban djan'
   | 'tomate cherry'
   | 'vinagre'
@@ -544,6 +549,59 @@ const baseRecipes: Record<string, BaseRecipe> = {
       {
         instruction:
           'Destapar y calentar a fuego medio para reducir el caldo. Ajustar de sal si necesario.',
+      },
+    ],
+  },
+  'chashu-men': {
+    title: 'Ramen de cerdo (Chashu-men)',
+    serving: 2,
+    ingredients: {
+      carne: [
+        { name: 'cerdo', quantity: 200, measurement: 'gramo' },
+        { name: 'ajo', quantity: 1, measurement: 'unidad' },
+        { name: 'puerro', quantity: 1, measurement: 'unidad' },
+        { name: 'agua', quantity: 500, measurement: 'mililitro' },
+        { name: 'vino blanco', quantity: 2, measurement: 'cucharada' },
+        { name: 'jengibre', quantity: 1, measurement: 'cucharilla' },
+        { name: 'salsa de soja', quantity: 2, measurement: 'cucharada' },
+        { name: 'miel', quantity: 2, measurement: 'cucharada' },
+        { name: 'salsa de ostras', quantity: 1, measurement: 'cucharada' },
+      ],
+      caldo: [
+        { name: 'agua', quantity: 350, measurement: 'mililitro' },
+        { name: 'salsa de soja', quantity: 1, measurement: 'cucharada' },
+        { name: 'salsa de ostras', quantity: 1, measurement: 'cucharilla' },
+        { name: 'pastilla avecrem', quantity: 1, measurement: 'cucharada' },
+        { name: 'grasa de pollo', quantity: 1, measurement: 'cucharada' },
+        { name: 'ajo', quantity: 1, measurement: 'cucharilla' },
+        { name: 'sal', quantity: 1, measurement: 'cucharilla' },
+        { name: 'aceite de sésamo', quantity: 1, measurement: 'cucharilla' },
+      ],
+      resto: [
+        { name: 'tallarines', quantity: 200, measurement: 'gramo' },
+        { name: 'maíz', quantity: 2, measurement: 'cucharada' },
+        { name: 'cebollino', quantity: 1, measurement: 'cucharada' },
+        { name: 'alga', quantity: 4, measurement: 'unidad' },
+      ],
+    },
+    steps: [
+      {
+        instruction:
+          'Para la carne, cortar el puerro en cortes diagonales de 5 centimetros y el ajo en laminas. Sellar el bloque de carne en una sarten, y entonces echar el puerro, ajo, agua, el vino y el jengibre y llevar a ebullicion. Entonces bajar a fuego medio, tapar la sarten y cocinar durante 20 minutos.',
+      },
+      {
+        instruction:
+          'Guardar 100 mililitros de agua y la carne y retirar el resto. Echar en la sarten vacia la soja, miel y la salsa de ostras junto al agua guardada. Echar la carne y calentar durante 10 minutos, dejando que espese la salsa. Una vez terminado, cortar en filetes finos.',
+        photo: 'carne',
+      },
+      {
+        instruction:
+          'Poner todos los ingredientes del caldo junto a los 350ml de agua hirviendo en un bol.',
+        photo: 'caldo',
+      },
+      {
+        instruction:
+          'Cocinar en una sarten con agua los tallarines el tiempo indicado. Al terminar colar, separar en dos boles y echar el caldo preparado anteriormente. Finalmente poner la carne, el maiz, el cebollino y las hojas de algas por encima.',
       },
     ],
   },
