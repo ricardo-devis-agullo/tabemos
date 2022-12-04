@@ -10,7 +10,7 @@ interface SummaryRecipe {
 const RecipeCard: React.FC<{ recipe: SummaryRecipe }> = ({ recipe }) => {
   return (
     <Link className="group" href={`/r/${recipe.slug}`}>
-      <div className="cursor-pointer h-96 w-52 m-2 relative">
+      <div className="cursor-pointer h-96 w-full md:w-52 relative">
         <Image
           alt="Recipe"
           className="object-cover w-full h-full"
@@ -28,7 +28,7 @@ const RecipeCard: React.FC<{ recipe: SummaryRecipe }> = ({ recipe }) => {
 
 export default function Home() {
   return (
-    <div className="flex flex-wrap justify-center">
+    <div className="flex flex-wrap justify-center space-x-2 space-y-2">
       {[...recipes.values()].map((recipe) => (
         <RecipeCard key={recipe.slug} recipe={recipe} />
       ))}
