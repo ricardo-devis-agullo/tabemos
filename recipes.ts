@@ -528,11 +528,11 @@ const baseRecipes: Record<string, BaseRecipe> = {
     ],
   },
   'sopa-de-alitas': {
-    draft: true,
     title: 'Sopa de alitas',
     serving: 2,
     ingredients: [
       { name: 'agua', quantity: 600, measurement: 'mililitro' },
+      { name: 'aceite de sésamo', quantity: 1, measurement: 'cucharilla' },
       { name: 'alitas de pollo', quantity: 10, measurement: 'unidad' },
       { name: 'vino blanco', quantity: 100, measurement: 'mililitro' },
       { name: 'ajo', quantity: 2, measurement: 'unidad' },
