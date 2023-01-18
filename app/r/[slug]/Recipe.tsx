@@ -76,7 +76,7 @@ export const RecipeInstructions: React.FC<Props> = ({ recipe }) => {
       ) : (
         Object.entries(recipe.ingredients).map(([section, ingredients]) => (
           <div key={section}>
-            <h5>{section}</h5>
+            <h5 className="font-bold underline uppercase my-2">{section}</h5>
             <ul className="list-none">
               {ingredients.map((ingredient) => (
                 <li key={ingredient.name}>{formatIngredient(ingredient)}</li>
@@ -86,14 +86,14 @@ export const RecipeInstructions: React.FC<Props> = ({ recipe }) => {
         ))
       )}
       <div className="serving">
-        <h3 className="inline-block text-xl my-6">Instrucciones</h3>
+        <h3 className="inline-block text-xl mt-6">Instrucciones</h3>
         {recipe.steps.map((step, idx) => (
-          <div key={idx}>
+          <div className="my-8 flex" key={idx}>
             {step.photo && (
               <Image
                 width={200}
                 height={150}
-                className="object-cover"
+                className="float object-cover"
                 alt="Recipe"
                 src={`/photos/${recipe.slug}-${step.photo}.jpg`}
               />
