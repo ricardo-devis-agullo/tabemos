@@ -605,6 +605,61 @@ const baseRecipes: Record<string, BaseRecipe> = {
       },
     ],
   },
+  'arroz-con-salmon': {
+    title: 'Arroz con salmón',
+    serving: 4,
+    ingredients: [
+      {
+        name: 'arroz',
+        quantity: 2,
+        measurement: 'vaso',
+      },
+      {
+        name: 'enoki',
+        quantity: 2,
+        measurement: 'manojo',
+      },
+      {
+        name: 'salmón',
+        quantity: 1,
+        measurement: 'unidad',
+      },
+      {
+        name: 'vino blanco',
+        quantity: 2,
+        measurement: 'cucharada',
+      },
+      {
+        name: 'salsa de soja',
+        quantity: 2,
+        measurement: 'cucharada',
+      },
+      {
+        name: 'agua',
+        quantity: 2,
+        measurement: 'vaso',
+      },
+      {
+        name: 'sal',
+        quantity: 2,
+        measurement: 'pellizco',
+      },
+    ],
+    steps: [
+      {
+        instruction:
+          'Lavar el arroz y echarlo en la máquina de arroz. Echar la soja, sal y el alcohol. Llenar el resto con el agua hasta la cantidad apropiada. Poner el salmón fresco encima junto con el enoki. Encender la máquina y esperar a que se cocine.',
+        photo: 'maquina',
+      },
+      {
+        instruction:
+          'Una vez hecho, retirar el salmón para quitarle la piel y el hueso. Volver a ponerlo en el cuenco y remover junto con el arroz para que se mezcle bien.',
+      },
+      {
+        instruction: 'Servir con un poco de cebollino troceado por encima.',
+      },
+    ],
+  },
 };
 
 export const recipes: ReadonlyMap<string, Recipe> = new Map(
