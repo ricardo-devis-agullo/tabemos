@@ -56,10 +56,12 @@ type IngredientName =
   | 'patata'
   | 'pimienta blanca'
   | 'pimienta negra'
+  | 'pimiento verde'
   | 'pollo concentrado'
   | 'ponzu'
   | 'puerro'
   | 'sal'
+  | 'salchicha'
   | 'salmón'
   | 'salsa de ostras'
   | 'salsa de pescado'
@@ -70,6 +72,7 @@ type IngredientName =
   | 'sésamo'
   | 'shiitake'
   | 'shimeji'
+  | 'spaghetti'
   | 'surimi'
   | 'tallarines'
   | 'toban djan'
@@ -657,6 +660,37 @@ const baseRecipes: Record<string, BaseRecipe> = {
       },
       {
         instruction: 'Servir con un poco de cebollino troceado por encima.',
+      },
+    ],
+  },
+  napolitan: {
+    title: 'Napolitan',
+    serving: 2,
+    ingredients: [
+      { name: 'pimiento verde', quantity: 1, measurement: 'unidad' },
+      { name: 'salchicha', quantity: 2, measurement: 'unidad' },
+      { name: 'cebolla', quantity: 1, measurement: 'unidad' },
+      { name: 'ketchup', quantity: 3, measurement: 'cucharada' },
+      { name: 'salsa worcestershire', quantity: 1, measurement: 'cucharilla' },
+      { name: 'pastilla avecrem', quantity: 1, measurement: 'cucharilla' },
+      { name: 'spaghetti', quantity: 160, measurement: 'gramo' },
+    ],
+    steps: [
+      {
+        instruction:
+          'Cortar la cebolla en juliana, las salchichas en rodajas pequeñas, y el pimiento en tiras finas.',
+      },
+      {
+        instruction:
+          'Echar en una sartén la cebolla y pocharla, seguido de la salchicha y el pimiento y sofreir bien.',
+      },
+      {
+        instruction:
+          'Añadir el ketchup y la salsa y hacer a fuego lento durante unos 5 a 10 minutos. Mientras ir preparando la pasta, y hacer un minuto menos del indicado (vamos a cocinarlo luego).',
+      },
+      {
+        instruction:
+          'Echar la pasta en la sartén con la salsa, mezclar a fuego lento y ya estará listo.',
       },
     ],
   },
