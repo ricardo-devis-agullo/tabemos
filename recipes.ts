@@ -368,7 +368,7 @@ const baseRecipes: Record<string, BaseRecipe> = {
       },
       {
         instruction:
-          'Echar en una cazuela con aciete el ajo, y cuando coja color echar la cebolla, seguido de los champiñónes y las gambas sin cabeza (y con piel)',
+          'Echar en una cazuela con aceite el ajo, y cuando coja color echar la cebolla, seguido de los champiñónes y las gambas sin cabeza (y con piel)',
       },
       {
         instruction:
@@ -686,7 +686,7 @@ const baseRecipes: Record<string, BaseRecipe> = {
       },
       {
         instruction:
-          'Añadir el ketchup y la salsa y hacer a fuego lento durante unos 5 a 10 minutos. Mientras ir preparando la pasta, y hacer un minuto menos del indicado (vamos a cocinarlo luego).',
+          'Añadir el ketchup, el polvo de avecrem y la salsa y hacer a fuego lento durante unos 5 a 10 minutos. Mientras ir preparando la pasta, y hacer un minuto menos del indicado (vamos a cocinarlo luego).',
       },
       {
         instruction:
