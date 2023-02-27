@@ -645,13 +645,18 @@ const baseRecipes: Record<string, BaseRecipe> = {
       {
         name: 'sal',
         quantity: 2,
-        measurement: 'pellizco',
+        measurement: 'cucharilla',
+      },
+      {
+        name: 'dashi',
+        quantity: 1,
+        measurement: 'cucharilla',
       },
     ],
     steps: [
       {
         instruction:
-          'Lavar el arroz y echarlo en la máquina de arroz. Echar la soja, sal y el alcohol. Llenar el resto con el agua hasta la cantidad apropiada. Poner el salmón fresco encima junto con el enoki. Encender la máquina y esperar a que se cocine.',
+          'Lavar el arroz y echarlo en la máquina de arroz. Echar la soja, sal, el dashi y el alcohol. Llenar el resto con el agua hasta la cantidad apropiada. Poner el salmón fresco encima junto con el enoki. Encender la máquina y esperar a que se cocine.',
         photo: 'maquina',
       },
       {
