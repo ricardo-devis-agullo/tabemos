@@ -12,24 +12,23 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "@next/font": "13.0.3",
-    "@types/node": "18.11.9",
-    "@types/react": "18.0.25",
-    "@types/react-dom": "18.0.9",
-    "eslint": "8.27.0",
-    "eslint-config-next": "13.0.3",
-    "next": "13.0.3",
+    "@types/node": "18.15.5",
+    "@types/react": "18.0.28",
+    "@types/react-dom": "18.0.11",
+    "eslint": "8.36.0",
+    "eslint-config-next": "13.2.4",
+    "next": "13.2.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "sharp": "0.31.2",
-    "typescript": "4.9.3"
+    "sharp": "0.31.3",
+    "typescript": "5.0.2"
   },
   "devDependencies": {
-    "autoprefixer": "10.4.13",
-    "husky": "8.0.2",
-    "node-dev": "7.4.3",
-    "postcss": "8.4.19",
-    "tailwindcss": "3.2.4",
+    "autoprefixer": "10.4.14",
+    "husky": "8.0.3",
+    "node-dev": "8.0.0",
+    "postcss": "8.4.21",
+    "tailwindcss": "3.2.7",
     "ts-node": "10.9.1"
   }
 }

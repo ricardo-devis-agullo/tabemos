@@ -1,7 +1,7 @@
 import './globals.css';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Indie_Flower } from '@next/font/google';
+import { Indie_Flower } from 'next/font/google';
 
 const indieFlower = Indie_Flower({ weight: '400' });
 
