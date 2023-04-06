@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Indie_Flower } from 'next/font/google';
 
-const indieFlower = Indie_Flower({ weight: '400' });
+const indieFlower = Indie_Flower({ weight: '400', subsets: ['latin'] });
 
 export default function RootLayout({
   children,
