@@ -1,0 +1,11 @@
+---
+import Layout from '../layouts/Layout.astro';
+import RecipeCard from '../components/RecipeCard.astro';
+import { recipes } from '../recipes';
+---
+
+<Layout title="Tabemos | Food blog">
+  <div class="flex flex-wrap justify-center space-x-2 space-y-2">
+    {[...recipes.values()].map((recipe) => <RecipeCard recipe={recipe} />)}
+  </div>
+</Layout>

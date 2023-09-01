@@ -1,34 +1,26 @@
 {
-  "name": "tabemos13",
-  "version": "0.1.0",
-  "private": true,
+  "name": "tender-trappist",
+  "type": "module",
+  "version": "0.0.1",
   "scripts": {
-    "dev": "next dev",
-    "allchecks": "npm run lint && npm run checks && npm run build",
-    "checks": "ts-node --project scripts/tsconfig.json scripts/checks.ts",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
+    "allchecks": "npm run checks && npm run build",
+    "checks": "tsx scripts/checks.ts",
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
     "prepare": "husky install"
   },
   "dependencies": {
-    "@types/node": "18.15.11",
-    "@types/react": "18.0.33",
-    "@types/react-dom": "18.0.11",
-    "eslint": "8.38.0",
-    "eslint-config-next": "^13.3.0",
-    "next": "^13.3.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "sharp": "0.32.0",
-    "typescript": "5.0.4"
+    "@astrojs/tailwind": "^5.0.0",
+    "@astrojs/vercel": "^4.0.2",
+    "astro": "^3.0.5",
+    "tailwindcss": "^3.0.24"
   },
   "devDependencies": {
-    "autoprefixer": "10.4.14",
-    "husky": "8.0.3",
-    "node-dev": "8.0.0",
-    "postcss": "8.4.21",
-    "tailwindcss": "3.3.1",
-    "ts-node": "10.9.1"
+    "@types/node": "^20.5.7",
+    "husky": "^8.0.3",
+    "tsx": "^3.12.8"
   }
 }

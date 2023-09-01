@@ -1,9 +1,12 @@
-import Image from 'next/image';
-import { Recipe, Ingredient } from '../../../recipes';
+---
+import { Image } from 'astro:assets';
+import type { Recipe, Ingredient } from '../recipes';
 
 interface Props {
   recipe: Recipe;
 }
+
+const { recipe } = Astro.props;
 
 function assertNever(x: never): never {
   throw new Error('Unexpected object: ' + x);
@@ -56,52 +59,48 @@ function formatIngredient({ name, measurement, quantity }: Ingredient): string {
       return assertNever(measurement);
   }
 }
+---
 
-export const RecipeInstructions: React.FC<Props> = ({ recipe }) => {
-  return (
-    <>
-      <div className="serving">
-        <h3 className="my-6 text-xl inline-block">Ingredientes</h3>
-        <span>{`(${recipe.serving} ${pluralize(
-          'persona',
-          recipe.serving
-        )})`}</span>
-      </div>
-      {!areIngredientsBySection(recipe.ingredients) ? (
-        <ul>
-          {recipe.ingredients.map((ingredient) => (
-            <li key={ingredient.name}>{formatIngredient(ingredient)}</li>
+<div class="serving">
+  <h3 class="my-6 text-xl inline-block">Ingredientes</h3>
+  <span>{`(${recipe.serving} ${pluralize('persona', recipe.serving)})`}</span>
+</div>
+{
+  !areIngredientsBySection(recipe.ingredients) ? (
+    <ul>
+      {recipe.ingredients.map((ingredient) => (
+        <li>{formatIngredient(ingredient)}</li>
+      ))}
+    </ul>
+  ) : (
+    Object.entries(recipe.ingredients).map(([section, ingredients]) => (
+      <div>
+        <h5 class="font-bold underline uppercase my-2">{section}</h5>
+        <ul class="list-none">
+          {ingredients.map((ingredient) => (
+            <li>{formatIngredient(ingredient)}</li>
           ))}
         </ul>
-      ) : (
-        Object.entries(recipe.ingredients).map(([section, ingredients]) => (
-          <div key={section}>
-            <h5 className="font-bold underline uppercase my-2">{section}</h5>
-            <ul className="list-none">
-              {ingredients.map((ingredient) => (
-                <li key={ingredient.name}>{formatIngredient(ingredient)}</li>
-              ))}
-            </ul>
-          </div>
-        ))
-      )}
-      <div className="serving">
-        <h3 className="inline-block text-xl mt-6">Instrucciones</h3>
-        {recipe.steps.map((step, idx) => (
-          <div className="my-8 flex" key={idx}>
-            {step.photo && (
-              <Image
-                width={200}
-                height={150}
-                className="float object-cover"
-                alt="Recipe"
-                src={`/photos/${recipe.slug}-${step.photo}.jpg`}
-              />
-            )}
-            <p>{step.instruction}</p>
-          </div>
-        ))}
       </div>
-    </>
-  );
-};
+    ))
+  )
+}
+<div class="serving">
+  <h3 class="inline-block text-xl mt-6">Instrucciones</h3>
+  {
+    recipe.steps.map((step, idx) => (
+      <div class="my-8 flex">
+        {step.photo && (
+          <Image
+            width={200}
+            height={150}
+            class="float object-cover"
+            alt="Recipe"
+            src={`/photos/${recipe.slug}-${step.photo}.jpg`}
+          />
+        )}
+        <p>{step.instruction}</p>
+      </div>
+    ))
+  }
+</div>

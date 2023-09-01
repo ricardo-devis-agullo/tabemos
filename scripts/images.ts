@@ -1,7 +1,9 @@
-import fs from 'fs';
+import fs from 'node:fs';
+import { recipes } from '../src/recipes';
 import path from 'path';
-import { recipes } from '../recipes';
+import { fileURLToPath } from 'url';
 
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const publicPath = path.join(__dirname, '..', 'public', 'photos');
 const files = fs.readdirSync(publicPath);
 
