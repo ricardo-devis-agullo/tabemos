@@ -18,7 +18,7 @@ const { slug } = Astro.params;
 const recipe = recipes.get(slug!)!;
 ---
 
-<Layout title="Tabemos | Food blog">
+<Layout title={`Tabemos | ${recipe.title}`}>
   <div class="flex flex-col items-center">
     <Image
       width={303}
