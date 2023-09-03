@@ -4,7 +4,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const publicPath = path.join(__dirname, '..', 'public', 'photos');
+const publicPath = path.join(__dirname, '..', 'src', 'photos');
 const files = fs.readdirSync(publicPath);
 
 function exit(msg: string): never {
