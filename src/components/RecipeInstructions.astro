@@ -96,7 +96,7 @@ function formatIngredient({ name, measurement, quantity }: Ingredient): string {
             height={150}
             class="float object-cover"
             alt="Recipe"
-            src={`/photos/${recipe.slug}-${step.photo}.jpg`}
+            src={import(`../photos/${recipe.slug}-${step.photo}.jpg`)}
           />
         )}
         <p>{step.instruction}</p>

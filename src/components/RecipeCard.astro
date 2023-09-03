@@ -1,5 +1,6 @@
 ---
 import { Image } from 'astro:assets';
+
 interface Props {
   recipe: { title: string; slug: string };
 }
@@ -12,7 +13,7 @@ const { recipe } = Astro.props;
     <Image
       alt="Recipe"
       class="object-cover w-full h-full"
-      src={`/photos/${recipe.slug}.jpg`}
+      src={import(`../photos/${recipe.slug}.jpg`)}
       height={1000}
       width={500}
     />

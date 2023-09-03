@@ -23,7 +23,7 @@ const recipe = recipes.get(slug!)!;
     <Image
       width={303}
       height={228}
-      src={`/photos/${recipe.slug}.jpg`}
+      src={import(`../../photos/${recipe.slug}.jpg`)}
       alt="Photo"
     />
     <h1 class="text-2xl font-bold mt-8">{recipe.title}</h1>
