@@ -23,6 +23,8 @@ type IngredientName =
   | 'arroz'
   | 'arroz integral'
   | 'azúcar'
+  | 'broccoli'
+  | 'caldo de pollo'
   | 'cebolla'
   | 'cebollino'
   | 'cerdo'
@@ -48,6 +50,7 @@ type IngredientName =
   | 'miel'
   | 'mirin'
   | 'molleja de pollo'
+  | 'muslos de pollo'
   | 'nata de cocinar'
   | 'nuez moscada'
   | 'panko'
@@ -70,6 +73,7 @@ type IngredientName =
   | 'sake'
   | 'sauce de poisson'
   | 'sésamo'
+  | 'shichu'
   | 'shiitake'
   | 'shimeji'
   | 'spaghetti'
@@ -290,7 +294,7 @@ const baseRecipes: Record<string, BaseRecipe> = {
       },
       {
         instruction:
-          'En una olla, poner unos cinco centimetros de agua y llevar a ebullición. Una vez hirviendo, poner el vaso que repose sobre el agua y tapar la olla. Calentar primero 3 minutos a fuego fuerte, y luego 10 minutos a fuego lento con la olla tapada en todo momento.',
+          'En una olla, poner unos cinco centimetros de agua y llevar a ebullición. Una vez hirviendo, poner el vaso que repose sobre el agua y tapar la olla. Calentar primero 3 minutos a fuego fuerte, y luego 15 minutos a fuego lento con la olla tapada en todo momento.',
         photo: 'olla',
       },
     ],
@@ -699,6 +703,49 @@ const baseRecipes: Record<string, BaseRecipe> = {
       },
     ],
   },
+  shichu: {
+    title: 'Shichu (estofado de pollo y verduras)',
+    serving: 4,
+    ingredients: [
+      { name: 'shichu', quantity: 1, measurement: 'unidad' },
+      { name: 'cebolla', quantity: 1, measurement: 'unidad' },
+      { name: 'zanahoria', quantity: 1, measurement: 'unidad' },
+      { name: 'broccoli', quantity: 1, measurement: 'unidad' },
+      { name: 'patata', quantity: 1, measurement: 'unidad' },
+      { name: 'muslos de pollo', quantity: 1, measurement: 'unidad' },
+      { name: 'caldo de pollo', quantity: 1, measurement: 'unidad' },
+      { name: 'maíz', quantity: 100, measurement: 'gramo' },
+    ],
+    steps: [
+      {
+        instruction:
+          'Cortar la cebolla en juliana, la zanahoria, la patata y el broccoli en trozos pequeños. Deshuesar los muslos y cortarlos en trozos pequeños.',
+      },
+      {
+        instruction:
+          'En una cazuela con un chorro de aceite echar la carne y sellar',
+      },
+      {
+        instruction:
+          'Retirar la carne temporalmente a un plato y echar a la cazuela la cebolla. Cuando poche echar la zanahoria y por ultimo la patata.',
+      },
+      {
+        instruction:
+          'Echar la carne reservada y cubrir con el caldo de pollo. Dejar cocinar a fuego medio durante 20 minutos.',
+      },
+      {
+        instruction: 'Mientras, en otro recipiente cocer el broccoli.',
+      },
+      {
+        instruction:
+          'Pasados los 20 minutos, echar el shichu y  el maiz y dejar 20 minutos.',
+      },
+      {
+        instruction:
+          'Por ultimo, echar el broccoli y servir, opcionalmente acompañado por arroz.',
+      },
+    ],
+  },
 };
 
 export const recipes: ReadonlyMap<string, Recipe> = new Map(
@@ -710,5 +757,5 @@ export const recipes: ReadonlyMap<string, Recipe> = new Map(
         ...baseRecipe,
         slug,
       },
-    ])
+    ]),
 );
