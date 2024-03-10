@@ -25,7 +25,9 @@ type IngredientName =
   | 'azúcar'
   | 'broccoli'
   | 'caldo de pollo'
+  | 'carne picada de cerdo'
   | 'cebolla'
+  | 'cebolleta'
   | 'cebollino'
   | 'cerdo'
   | 'champiñón'
@@ -80,6 +82,7 @@ type IngredientName =
   | 'surimi'
   | 'tallarines'
   | 'toban djan'
+  | 'tofu'
   | 'tomate cherry'
   | 'vinagre'
   | 'vino blanco'
@@ -743,6 +746,90 @@ const baseRecipes: Record<string, BaseRecipe> = {
       {
         instruction:
           'Por ultimo, echar el broccoli y servir, opcionalmente acompañado por arroz.',
+      },
+    ],
+  },
+  mabodofu: {
+    title: 'Mabodofu',
+    serving: 2,
+    ingredients: {
+      base: [
+        {
+          name: 'tofu',
+          quantity: 300,
+          measurement: 'gramo',
+        },
+        {
+          name: 'carne picada de cerdo',
+          quantity: 400,
+          measurement: 'gramo',
+        },
+        {
+          name: 'ajo',
+          quantity: 1,
+          measurement: 'unidad',
+        },
+        {
+          name: 'jengibre',
+          quantity: 1,
+          measurement: 'cucharilla',
+        },
+        {
+          name: 'cebollino',
+          quantity: 1,
+          measurement: 'cucharada',
+        },
+        {
+          name: 'cebolleta',
+          quantity: 1,
+          measurement: 'cucharada',
+        },
+        {
+          name: 'toban djan',
+          quantity: 2,
+          measurement: 'cucharada',
+        },
+        {
+          name: 'aceite de sésamo',
+          quantity: 1 / 2,
+          measurement: 'cucharada',
+        },
+        {
+          name: 'maicena',
+          quantity: 1,
+          measurement: 'cucharada',
+        },
+      ],
+      salsa: [
+        { name: 'vino blanco', quantity: 2, measurement: 'cucharada' },
+        { name: 'mirin', quantity: 1, measurement: 'cucharada' },
+        { name: 'salsa de soja', quantity: 1, measurement: 'cucharada' },
+        {
+          name: 'pollo concentrado',
+          quantity: 1 / 2,
+          measurement: 'cucharada',
+        },
+        { name: 'azúcar', quantity: 1 / 2, measurement: 'cucharada' },
+        { name: 'agua', quantity: 200, measurement: 'mililitro' },
+      ],
+    },
+    steps: [
+      {
+        instruction:
+          'Calienta aceite en una sartén y fríe el ajo picado, el jengibre y la cebolla verde. Agrega la carne picada y fríela hasta que cambie de color.',
+      },
+      {
+        instruction: 'Añade la cantidad deseada de toban djan y saltea.',
+      },
+      {
+        instruction: 'Agrega la salsa y lleva a ebullición.',
+      },
+      {
+        instruction: 'Agrega el tofu y deja cocinar a fuego lento por un rato.',
+      },
+      {
+        instruction:
+          'Baja el fuego, añade el almidón de patata soluble en agua y mezcla bien. Vuelve a bajar el fuego, deja que espese, y termina añadiendo aceite de sésamo y cebollino.',
       },
     ],
   },

@@ -38,9 +38,9 @@ function pluralize(word: string, count: number): string {
 function formatIngredient({ name, measurement, quantity }: Ingredient): string {
   switch (measurement) {
     case 'cucharada':
-      return `${quantity} ${pluralize('cucharada', quantity)} de ${name}`;
+      return `${formatUnit(quantity)} ${pluralize('cucharada', quantity)} de ${name}`;
     case 'cucharilla':
-      return `${quantity} ${pluralize('cucharilla', quantity)} de ${name}`;
+      return `${formatUnit(quantity)} ${pluralize('cucharilla', quantity)} de ${name}`;
     case 'mililitro':
       return `${quantity} ${pluralize('mililitro', quantity)} de ${name}`;
     case 'litro':
