@@ -833,6 +833,41 @@ const baseRecipes: Record<string, BaseRecipe> = {
       },
     ],
   },
+  tebasaki: {
+    title: 'Tebasaki (alitas de pollo estilo Nagoya)',
+    ingredients: {
+      alitas: [
+        { name: 'alitas de pollo', quantity: 10, measurement: 'unidad' },
+        { name: 'maicena', quantity: 1, measurement: 'cucharada' },
+        { name: 'sal', quantity: 1, measurement: 'cucharilla' },
+        { name: 'pimienta negra', quantity: 1, measurement: 'cucharilla' },
+        { name: 'sésamo', quantity: 1, measurement: 'cucharada' },
+      ],
+      salsa: [
+        { name: 'salsa de soja', quantity: 2, measurement: 'cucharada' },
+        { name: 'mirin', quantity: 1, measurement: 'cucharada' },
+        { name: 'vino blanco', quantity: 1, measurement: 'cucharada' },
+        { name: 'azúcar', quantity: 1, measurement: 'cucharada' },
+        { name: 'ajo', quantity: 1, measurement: 'unidad' },
+        { name: 'jengibre', quantity: 1, measurement: 'cucharilla' },
+      ],
+    },
+    serving: 2,
+    steps: [
+      {
+        instruction:
+          'Rebozar las alitas en maicena, sal, pimienta negra y freír en aceite caliente. Una primera pasada a 180 grados durante 5 minutos, y una segunda pasada a 200 grados durante 3 minutos. Se puede hacer también en una freidora de aire haciendo 6 minutos a 180, y 8 a 200, dandole la vuelta a la mitad..',
+      },
+      {
+        instruction:
+          'Mezclar todos los ingredientes de la salsa y echar en una olla. Calentar hasta que reduzca a la mitad y quede espesa.',
+      },
+      {
+        instruction:
+          'Cuando el pollo esté hecho, echar en la olla con la salsa y remover bien. Terminar adornando con sésamo y servir.',
+      },
+    ],
+  },
 };
 
 export const recipes: ReadonlyMap<string, Recipe> = new Map(
