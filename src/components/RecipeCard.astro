@@ -11,6 +11,7 @@ const { recipe } = Astro.props;
 <a class="group" href={`/r/${recipe.slug}`}>
   <div class="cursor-pointer h-96 w-full md:w-52 relative">
     <Image
+      loading="eager"
       alt="Recipe"
       class="object-cover w-full h-full"
       src={import(`../photos/${recipe.slug}.jpg`)}
