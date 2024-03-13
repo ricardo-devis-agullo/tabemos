@@ -101,6 +101,7 @@ interface Step {
 
 interface BaseRecipe {
   readonly title: string;
+  readonly published: string;
   readonly draft?: boolean;
   readonly serving: number;
   readonly ingredients:
@@ -115,6 +116,7 @@ export interface Recipe extends BaseRecipe {
 
 const baseRecipes: Record<string, BaseRecipe> = {
   'ensalada-de-cilantro': {
+    published: '10/04/2020',
     title: 'Ensalada de cilantro',
     serving: 2,
     ingredients: [
@@ -134,6 +136,7 @@ const baseRecipes: Record<string, BaseRecipe> = {
     ],
   },
   'asia-don': {
+    published: '13/04/2020',
     title: 'Asia don (donbori de salmón y aguacate)',
     serving: 2,
     ingredients: [
@@ -158,6 +161,7 @@ const baseRecipes: Record<string, BaseRecipe> = {
     ],
   },
   'tiras-de-cerdo-al-limon': {
+    published: '18/05/2020',
     title: 'Tiras de cerdo al limón',
     serving: 2,
     ingredients: [
@@ -173,6 +177,7 @@ const baseRecipes: Record<string, BaseRecipe> = {
     steps: [],
   },
   'sopa-de-maiz': {
+    published: '18/05/2020',
     title: 'Sopa de maíz',
     serving: 4,
     ingredients: [
@@ -213,6 +218,7 @@ const baseRecipes: Record<string, BaseRecipe> = {
     ],
   },
   'mollejas-al-limon': {
+    published: '18/05/2020',
     title: 'Mollejas al limon',
     serving: 2,
     ingredients: [
@@ -245,6 +251,7 @@ const baseRecipes: Record<string, BaseRecipe> = {
     ],
   },
   nikujaga: {
+    published: '10/11/2020',
     title: 'Estofado de carne y patatas (Nikujaga)',
     serving: 2,
     ingredients: [
@@ -273,6 +280,7 @@ const baseRecipes: Record<string, BaseRecipe> = {
     ],
   },
   chawanmushi: {
+    published: '05/12/2020',
     title: 'Natillas de huevo al vapor (Chawanmushi)',
     serving: 2,
     ingredients: [
@@ -303,6 +311,7 @@ const baseRecipes: Record<string, BaseRecipe> = {
     ],
   },
   hanbagu: {
+    published: '08/01/2022',
     title: 'Hamburguesa sencilla (hanbagu)',
     serving: 2,
     ingredients: {
@@ -351,6 +360,7 @@ const baseRecipes: Record<string, BaseRecipe> = {
     ],
   },
   'tom-yum-kung': {
+    published: '08/01/2022',
     title: 'Tom Yum Kung (Sopa de gambas)',
     serving: 2,
     ingredients: [
@@ -388,6 +398,7 @@ const baseRecipes: Record<string, BaseRecipe> = {
     ],
   },
   'pollo-yangnyeom': {
+    published: '10/01/2022',
     title: 'Pollo Yangnyeom',
     serving: 2,
     ingredients: [
@@ -421,6 +432,7 @@ const baseRecipes: Record<string, BaseRecipe> = {
     ],
   },
   'acqua-pazza': {
+    published: '26/10/2022',
     title: 'Acqua pazza',
     serving: 2,
     ingredients: [
@@ -456,6 +468,7 @@ const baseRecipes: Record<string, BaseRecipe> = {
     ],
   },
   'ebi-chili': {
+    published: '11/11/2022',
     title: 'Gambas picantes (ebi chili)',
     serving: 2,
     ingredients: {
@@ -505,6 +518,7 @@ const baseRecipes: Record<string, BaseRecipe> = {
     ],
   },
   nabe: {
+    published: '12/11/2022',
     title: 'Nabe',
     serving: 3,
     ingredients: [
@@ -538,6 +552,7 @@ const baseRecipes: Record<string, BaseRecipe> = {
     ],
   },
   'sopa-de-alitas': {
+    published: '12/11/2022',
     title: 'Sopa de alitas',
     serving: 2,
     ingredients: [
@@ -563,6 +578,7 @@ const baseRecipes: Record<string, BaseRecipe> = {
     ],
   },
   'chashu-men': {
+    published: '16/11/2022',
     title: 'Ramen de cerdo (Chashu-men)',
     serving: 2,
     ingredients: {
@@ -616,6 +632,7 @@ const baseRecipes: Record<string, BaseRecipe> = {
     ],
   },
   'arroz-con-salmon': {
+    published: '27/01/2023',
     title: 'Arroz con salmón',
     serving: 4,
     ingredients: [
@@ -676,6 +693,7 @@ const baseRecipes: Record<string, BaseRecipe> = {
     ],
   },
   napolitan: {
+    published: '11/02/2023',
     title: 'Napolitan',
     serving: 2,
     ingredients: [
@@ -707,6 +725,7 @@ const baseRecipes: Record<string, BaseRecipe> = {
     ],
   },
   shichu: {
+    published: '17/12/2023',
     title: 'Shichu (estofado de pollo y verduras)',
     serving: 4,
     ingredients: [
@@ -750,6 +769,7 @@ const baseRecipes: Record<string, BaseRecipe> = {
     ],
   },
   mabodofu: {
+    published: '10/03/2024',
     title: 'Mabodofu',
     serving: 2,
     ingredients: {
@@ -834,6 +854,7 @@ const baseRecipes: Record<string, BaseRecipe> = {
     ],
   },
   tebasaki: {
+    published: '12/03/2024',
     title: 'Tebasaki (alitas de pollo estilo Nagoya)',
     ingredients: {
       alitas: [
