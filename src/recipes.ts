@@ -49,12 +49,15 @@ type IngredientName =
   | 'maicena'
   | 'maíz'
   | 'mantequilla'
+  | 'mayonesa'
   | 'miel'
   | 'mirin'
   | 'molleja de pollo'
+  | 'mostaza'
   | 'muslos de pollo'
   | 'nata de cocinar'
   | 'nuez moscada'
+  | 'pan de molde'
   | 'panko'
   | 'pasta tom yum'
   | 'pastilla avecrem'
@@ -886,6 +889,34 @@ const baseRecipes: Record<string, BaseRecipe> = {
       {
         instruction:
           'Cuando el pollo esté hecho, echar en la olla con la salsa y remover bien. Terminar adornando con sésamo y servir.',
+      },
+    ],
+  },
+  'tamago-sando': {
+    published: '07/04/2024',
+    title: 'Tamago Sando (sándwich de huevo)',
+    serving: 2,
+    ingredients: [
+      { name: 'pan de molde', quantity: 4, measurement: 'unidad' },
+      { name: 'huevo', quantity: 3, measurement: 'unidad' },
+      { name: 'mayonesa', quantity: 3, measurement: 'cucharada' },
+      { name: 'mantequilla', quantity: 1, measurement: 'cucharada' },
+      { name: 'mostaza', quantity: 1, measurement: 'cucharada' },
+      { name: 'sal', quantity: 1, measurement: 'pellizco' },
+      { name: 'pimienta negra', quantity: 1, measurement: 'pellizco' },
+    ],
+    steps: [
+      {
+        instruction:
+          'Cocer los huevos en agua hirviendo durante 10 minutos. Pelar y machacar en un bol.',
+      },
+      {
+        instruction:
+          'Poner las yemas en un bol, cortar las claras en trozos pequeños y echar en el bol. Añadir la mayonesa, la sal y la pimienta y mezclar bien.',
+      },
+      {
+        instruction:
+          'Untar mantequilla en el pan de molde y echar la mostaza en una de las rebanadas. Echar el huevo en la otra rebanada y cerrar el sándwich. Cortar por la mitad y servir.',
       },
     ],
   },
