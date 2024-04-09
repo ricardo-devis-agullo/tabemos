@@ -86,6 +86,7 @@ type IngredientName =
   | 'tallarines'
   | 'toban djan'
   | 'tofu'
+  | 'tsuyu'
   | 'tomate cherry'
   | 'vinagre'
   | 'vino blanco'
@@ -917,6 +918,61 @@ const baseRecipes: Record<string, BaseRecipe> = {
       {
         instruction:
           'Untar mantequilla en el pan de molde y echar la mostaza en una de las rebanadas. Echar el huevo en la otra rebanada y cerrar el sándwich. Cortar por la mitad y servir.',
+      },
+    ],
+  },
+  'niku-dofu': {
+    published: '09/04/2024',
+    title: 'Niku dofu (tofu con cerdo)',
+    serving: 2,
+    ingredients: [
+      {
+        name: 'cerdo',
+        quantity: 300,
+        measurement: 'gramo',
+      },
+      {
+        name: 'tofu',
+        quantity: 200,
+        measurement: 'gramo',
+      },
+      {
+        name: 'tsuyu',
+        quantity: 2,
+        measurement: 'cucharilla',
+      },
+      {
+        name: 'salsa de soja',
+        quantity: 1,
+        measurement: 'cucharada',
+      },
+      {
+        name: 'vino blanco',
+        quantity: 1 + 1 / 2,
+        measurement: 'cucharada',
+      },
+      {
+        name: 'mirin',
+        quantity: 1 + 1 / 2,
+        measurement: 'cucharada',
+      },
+      {
+        name: 'azúcar',
+        quantity: 1,
+        measurement: 'cucharilla',
+      },
+    ],
+    steps: [
+      {
+        instruction: 'Cortar el cerdo en láminas muy finas y reservar.',
+      },
+      {
+        instruction:
+          'Echar tofu a la sarten junto con el resto de ingredientes menos el cerdo. Calentar hasta hervir la salsa, y entonces tapar a fuego lento unos 3 minutos (darle la vuelta al tofu a la mitad).',
+      },
+      {
+        instruction:
+          'Echar la carne en un lado y seguir cocinando. Servir cuando este la carne hecha.',
       },
     ],
   },
