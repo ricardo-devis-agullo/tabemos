@@ -925,54 +925,63 @@ const baseRecipes: Record<string, BaseRecipe> = {
     published: '09/04/2024',
     title: 'Niku dofu (tofu con cerdo)',
     serving: 2,
-    ingredients: [
-      {
-        name: 'cerdo',
-        quantity: 300,
-        measurement: 'gramo',
-      },
-      {
-        name: 'tofu',
-        quantity: 200,
-        measurement: 'gramo',
-      },
-      {
-        name: 'tsuyu',
-        quantity: 2,
-        measurement: 'cucharilla',
-      },
-      {
-        name: 'salsa de soja',
-        quantity: 1,
-        measurement: 'cucharada',
-      },
-      {
-        name: 'vino blanco',
-        quantity: 1 + 1 / 2,
-        measurement: 'cucharada',
-      },
-      {
-        name: 'mirin',
-        quantity: 1 + 1 / 2,
-        measurement: 'cucharada',
-      },
-      {
-        name: 'azúcar',
-        quantity: 1,
-        measurement: 'cucharilla',
-      },
-    ],
+    ingredients: {
+      base: [
+        {
+          name: 'cerdo',
+          quantity: 300,
+          measurement: 'gramo',
+        },
+        {
+          name: 'tofu',
+          quantity: 200,
+          measurement: 'gramo',
+        },
+        {
+          name: 'cebollino',
+          quantity: 1,
+          measurement: 'pellizco',
+        },
+      ],
+      salsa: [
+        {
+          name: 'tsuyu',
+          quantity: 2,
+          measurement: 'cucharilla',
+        },
+        {
+          name: 'salsa de soja',
+          quantity: 1,
+          measurement: 'cucharada',
+        },
+        {
+          name: 'vino blanco',
+          quantity: 1 + 1 / 2,
+          measurement: 'cucharada',
+        },
+        {
+          name: 'mirin',
+          quantity: 1 + 1 / 2,
+          measurement: 'cucharada',
+        },
+        {
+          name: 'azúcar',
+          quantity: 1,
+          measurement: 'cucharilla',
+        },
+      ],
+    },
     steps: [
       {
         instruction: 'Cortar el cerdo en láminas muy finas y reservar.',
       },
       {
         instruction:
-          'Echar tofu a la sarten junto con el resto de ingredientes menos el cerdo. Calentar hasta hervir la salsa, y entonces tapar a fuego lento unos 3 minutos (darle la vuelta al tofu a la mitad).',
+          'Echar tofu a la sarten junto con la salsa. Calentar hasta hervir la salsa, y entonces tapar a fuego lento unos 3 minutos (darle la vuelta al tofu a la mitad).',
       },
       {
         instruction:
-          'Echar la carne en un lado y seguir cocinando. Servir cuando este la carne hecha.',
+          'Echar la carne en un lado y seguir cocinando. Cuando la carne este hecha echar el cebollino picado por encima y servir.',
       },
     ],
   },
