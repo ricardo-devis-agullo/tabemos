@@ -938,6 +938,11 @@ const baseRecipes: Record<string, BaseRecipe> = {
           measurement: 'gramo',
         },
         {
+          name: 'enoki',
+          quantity: 1,
+          measurement: 'manojo',
+        },
+        {
           name: 'cebollino',
           quantity: 1,
           measurement: 'pellizco',
@@ -977,7 +982,7 @@ const baseRecipes: Record<string, BaseRecipe> = {
       },
       {
         instruction:
-          'Echar tofu a la sarten junto con la salsa. Calentar hasta hervir la salsa, y entonces tapar a fuego lento unos 3 minutos (darle la vuelta al tofu a la mitad).',
+          'Echar tofu a la sarten junto con la salsa y el enoki. Calentar hasta hervir la salsa, y entonces tapar a fuego lento unos 3 minutos (darle la vuelta al tofu a la mitad).',
       },
       {
         instruction:
