@@ -866,6 +866,7 @@ const baseRecipes: Record<string, BaseRecipe> = {
         { name: 'maicena', quantity: 1, measurement: 'cucharada' },
         { name: 'sal', quantity: 1, measurement: 'cucharilla' },
         { name: 'pimienta negra', quantity: 1, measurement: 'cucharilla' },
+        { name: 'pimienta blanca', quantity: 1, measurement: 'cucharilla' },
         { name: 'sésamo', quantity: 1, measurement: 'cucharada' },
       ],
       salsa: [
@@ -889,7 +890,7 @@ const baseRecipes: Record<string, BaseRecipe> = {
       },
       {
         instruction:
-          'Cuando el pollo esté hecho, echar en la olla con la salsa y remover bien. Terminar adornando con sésamo y servir.',
+          'Cuando el pollo esté hecho, echar en la olla con la salsa y remover bien. Terminar adornando con sésamo y pimienta blanca y servir.',
       },
     ],
   },
