@@ -39,6 +39,7 @@ type IngredientName =
   | 'gamba'
   | 'gochujang'
   | 'grasa de pollo'
+  | 'guindilla picante'
   | 'huevo'
   | 'jengibre'
   | 'ketchup'
@@ -62,6 +63,7 @@ type IngredientName =
   | 'pasta tom yum'
   | 'pastilla avecrem'
   | 'patata'
+  | 'perejil'
   | 'pimienta blanca'
   | 'pimienta negra'
   | 'pimiento verde'
@@ -988,6 +990,67 @@ const baseRecipes: Record<string, BaseRecipe> = {
       {
         instruction:
           'Echar la carne en un lado y seguir cocinando. Cuando la carne este hecha echar el cebollino picado por encima y servir.',
+      },
+    ],
+  },
+  'vongole-in-bianco': {
+    title: 'Spaghetti Alle Vongole in Bianco',
+    published: '14/04/2024',
+    serving: 2,
+    ingredients: [
+      {
+        name: 'spaghetti',
+        quantity: 180,
+        measurement: 'gramo',
+      },
+
+      {
+        name: 'ajo',
+        quantity: 3,
+        measurement: 'unidad',
+      },
+      {
+        name: 'guindilla picante',
+        quantity: 6,
+        measurement: 'unidad',
+      },
+      {
+        name: 'aceite de oliva',
+        quantity: 3,
+        measurement: 'cucharada',
+      },
+      {
+        name: 'almeja',
+        quantity: 20,
+        measurement: 'unidad',
+      },
+      {
+        name: 'vino blanco',
+        quantity: 100,
+        measurement: 'mililitro',
+      },
+      {
+        name: 'perejil',
+        quantity: 1,
+        measurement: 'pellizco',
+      },
+    ],
+    steps: [
+      {
+        instruction:
+          'Lavar las almejas y dejarlas en agua con sal (3%) durante 30 minutos.',
+      },
+      {
+        instruction:
+          'Cocer la pasta en agua con sal durante 1 minuto menos del tiempo indicado. Echar menos sal que de costumbre pues las almejas ya tienen sal.',
+      },
+      {
+        instruction:
+          'En una sarten echar el aceite y el ajo picado muy fino. Cuando esté dorado echar las almejas y el vino blanco. Tapar y dejar cocinar hasta que las almejas se abran. Ir retirando las almejas y quitar la cáscara de la mayoria menos unas cuantas para adornar.',
+      },
+      {
+        instruction:
+          'Echar la pasta en la sarten y mezclar bien con el caldo de las almejas. Servir con las almejas por encima y un poco de perejil picado y un chorrito de aceite extra.',
       },
     ],
   },
