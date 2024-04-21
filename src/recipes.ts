@@ -575,7 +575,7 @@ const baseRecipes: Record<string, BaseRecipe> = {
     steps: [
       {
         instruction:
-          'En una olla a presión echar todos los ingredientes y calentar 10 minutos.',
+          'En una olla a presión echar todos los ingredientes y calentar 15 minutos.',
       },
       {
         instruction:
