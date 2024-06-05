@@ -36,6 +36,7 @@ type IngredientName =
   | 'dashi'
   | 'dorada'
   | 'enoki'
+  | 'gallo'
   | 'gamba'
   | 'gochujang'
   | 'grasa de pollo'
@@ -1051,6 +1052,53 @@ const baseRecipes: Record<string, BaseRecipe> = {
       {
         instruction:
           'Echar la pasta en la sarten y mezclar bien con el caldo de las almejas. Servir con las almejas por encima y un poco de perejil picado y un chorrito de aceite extra.',
+      },
+    ],
+  },
+  nizakana: {
+    title: 'Nizakana (Pescado cocido en salsa)',
+    published: '05/06/2024',
+    serving: 2,
+    ingredients: [
+      {
+        name: 'gallo',
+        quantity: 2,
+        measurement: 'unidad',
+      },
+      {
+        name: 'salsa de soja',
+        quantity: 2,
+        measurement: 'cucharada',
+      },
+      {
+        name: 'azúcar',
+        quantity: 1,
+        measurement: 'cucharada',
+      },
+      {
+        name: 'vino blanco',
+        quantity: 1,
+        measurement: 'cucharada',
+      },
+      {
+        name: 'agua',
+        quantity: 150,
+        measurement: 'mililitro',
+      },
+      {
+        name: 'jengibre',
+        quantity: 1,
+        measurement: 'unidad',
+      },
+    ],
+    steps: [
+      {
+        instruction:
+          'Echar todos los ingredientes menos el pescado en una sarten y llevar a ebullición.',
+      },
+      {
+        instruction:
+          'Con un cuchillo hacer un corte en cruz en la parte trasera, y ponerlo en la sarten. Bajar el fuego a medio, tapar durante 10 minutos y servir. De vez en cuando remojar el pescado con la salsa con ayuda de una cuchara.',
       },
     ],
   },
