@@ -839,7 +839,7 @@ const baseRecipes: Record<string, BaseRecipe> = {
           measurement: 'cucharada',
         },
         { name: 'azúcar', quantity: 1 / 2, measurement: 'cucharada' },
-        { name: 'agua', quantity: 120, measurement: 'mililitro' },
+        { name: 'agua', quantity: 150, measurement: 'mililitro' },
       ],
     },
     steps: [
@@ -854,7 +854,8 @@ const baseRecipes: Record<string, BaseRecipe> = {
         instruction: 'Agrega la salsa y lleva a ebullición.',
       },
       {
-        instruction: 'Agrega el tofu y deja cocinar a fuego lento por un rato.',
+        instruction:
+          'Agrega el tofu, cortado en trozos pequeños y deja cocinar a fuego lento por un rato.',
       },
       {
         instruction:
