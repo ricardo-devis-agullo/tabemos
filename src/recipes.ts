@@ -22,6 +22,7 @@ type IngredientName =
   | 'almeja'
   | 'arroz'
   | 'arroz integral'
+  | 'atún en lata'
   | 'azúcar'
   | 'broccoli'
   | 'caldo de pollo'
@@ -57,6 +58,7 @@ type IngredientName =
   | 'molleja de pollo'
   | 'mostaza'
   | 'muslos de pollo'
+  | 'nabo'
   | 'nata de cocinar'
   | 'nuez moscada'
   | 'pan de molde'
@@ -837,13 +839,13 @@ const baseRecipes: Record<string, BaseRecipe> = {
           measurement: 'cucharada',
         },
         { name: 'azúcar', quantity: 1 / 2, measurement: 'cucharada' },
-        { name: 'agua', quantity: 200, measurement: 'mililitro' },
+        { name: 'agua', quantity: 120, measurement: 'mililitro' },
       ],
     },
     steps: [
       {
         instruction:
-          'Calienta aceite en una sartén y fríe el ajo picado, el jengibre y la cebolla verde. Agrega la carne picada y fríela hasta que cambie de color.',
+          'Calienta aceite en una sartén y fríe el ajo picado, el jengibre y la cebolleta. Agrega la carne picada y fríela hasta que cambie de color.',
       },
       {
         instruction: 'Añade la cantidad deseada de toban djan y saltea.',
@@ -1099,6 +1101,69 @@ const baseRecipes: Record<string, BaseRecipe> = {
       {
         instruction:
           'Con un cuchillo hacer un corte en cruz en la parte trasera, y ponerlo en la sarten. Bajar el fuego a medio, tapar durante 10 minutos y servir. De vez en cuando remojar el pescado con la salsa con ayuda de una cuchara.',
+      },
+    ],
+  },
+  'daikon-pasta': {
+    title: 'Pasta de nabo y atún',
+    published: '10/06/2024',
+    serving: 2,
+    ingredients: [
+      {
+        name: 'spaghetti',
+        quantity: 160,
+        measurement: 'gramo',
+      },
+      {
+        name: 'atún en lata',
+        quantity: 2,
+        measurement: 'unidad',
+      },
+      {
+        name: 'nabo',
+        quantity: 1,
+        measurement: 'unidad',
+      },
+      {
+        name: 'salsa de soja',
+        quantity: 2,
+        measurement: 'cucharada',
+      },
+      {
+        name: 'sésamo',
+        quantity: 1,
+        measurement: 'cucharada',
+      },
+      {
+        name: 'mantequilla',
+        quantity: 1,
+        measurement: 'cucharada',
+      },
+      {
+        name: 'alga',
+        quantity: 1,
+        measurement: 'unidad',
+      },
+    ],
+    steps: [
+      {
+        instruction:
+          'Cocer la pasta en agua con sal durante 1 minuto menos del tiempo indicado.',
+      },
+      {
+        instruction:
+          'Echar la mantequilla a una sartén caliente, y echar el atún. Cocinar durante unos minutos',
+      },
+      {
+        instruction: 'Rallar el nabo y dejarlo preparado',
+      },
+      {
+        instruction:
+          'Cuando la pasta esté hecha, echarla a la sartén con el atún y mezclar bien.',
+      },
+      {
+        instruction:
+          'Poner la pasta en un plato, poner el nabo rallado por encima, echar un chorro de soja encima y adornar con la alga y el sésamo.',
       },
     ],
   },
