@@ -1168,6 +1168,96 @@ const baseRecipes: Record<string, BaseRecipe> = {
       },
     ],
   },
+  oyakodon: {
+    title: 'Oyakodon',
+    published: '29/06/2024',
+    serving: 2,
+    ingredients: {
+      base: [
+        {
+          name: 'muslos de pollo',
+          quantity: 1,
+          measurement: 'unidad',
+        },
+        {
+          name: 'arroz',
+          quantity: 2,
+          measurement: 'manojo',
+        },
+        {
+          name: 'huevo',
+          quantity: 4,
+          measurement: 'unidad',
+        },
+        {
+          name: 'cebolla',
+          quantity: 1,
+          measurement: 'unidad',
+        },
+        {
+          name: 'alga',
+          quantity: 1,
+          measurement: 'cucharada',
+        },
+      ],
+      salsa: [
+        {
+          name: 'salsa de soja',
+          quantity: 1,
+          measurement: 'cucharada',
+        },
+        {
+          name: 'mirin',
+          quantity: 1,
+          measurement: 'cucharada',
+        },
+        {
+          name: 'vino blanco',
+          quantity: 1 / 2,
+          measurement: 'cucharada',
+        },
+        {
+          name: 'azúcar',
+          quantity: 1 / 2,
+          measurement: 'cucharada',
+        },
+        {
+          name: 'pastilla avecrem',
+          quantity: 1 / 2,
+          measurement: 'unidad',
+        },
+        {
+          name: 'agua',
+          quantity: 80,
+          measurement: 'mililitro',
+        },
+      ],
+    },
+    steps: [
+      {
+        instruction:
+          ' Pon la cebolla cortada en juliana en una cazuela junto con la salsa y cocina a fuego medio alto durante 2 minutos.',
+      },
+      {
+        instruction:
+          'Añade el pollo cortado en trozos pequeños y cocina durante 3 minutos a fuego medio hasta que el pollo esté hecho.',
+      },
+      {
+        instruction: 'Añade 2/3 del huevo batido y mezcla bien',
+      },
+      {
+        instruction: 'Tapa y cocina a fuego lento durante 30 segundos.',
+      },
+      {
+        instruction:
+          'Echa el huevo restante por encima y remueve a fuego medio hasta que esté medio hecho.',
+      },
+      {
+        instruction:
+          'Servir encima de un bol de arroz y adornar con alga cortada.',
+      },
+    ],
+  },
 };
 
 export const recipes: ReadonlyMap<string, Recipe> = new Map(
