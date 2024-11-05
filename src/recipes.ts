@@ -1186,7 +1186,7 @@ const baseRecipes: Record<string, BaseRecipe> = {
         },
         {
           name: 'huevo',
-          quantity: 4,
+          quantity: 2,
           measurement: 'unidad',
         },
         {
@@ -1243,7 +1243,7 @@ const baseRecipes: Record<string, BaseRecipe> = {
           'Añade el pollo cortado en trozos pequeños y cocina durante 3 minutos a fuego medio hasta que el pollo esté hecho.',
       },
       {
-        instruction: 'Añade 2/3 del huevo batido y mezcla bien',
+        instruction: 'Bate ligeramente los huevos y añade 2/3 del huevo batido a la cazuela. Procede a mezclar bien.',
       },
       {
         instruction: 'Tapa y cocina a fuego lento durante 30 segundos.',
