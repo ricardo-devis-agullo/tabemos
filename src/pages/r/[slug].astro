@@ -19,6 +19,12 @@ const recipe = recipes.get(slug!)!;
 ---
 
 <Layout title={`Tabemos | ${recipe.title}`}>
+  <head>
+    <meta property="og:title" content={recipe.title} />
+    <meta property="og:image" content={`../../photos/${recipe.slug}.jpg`} />
+    <meta property="og:description" content={`Check out this recipe for ${recipe.title}`} />
+    <meta property="og:type" content="article" />
+  </head>
   <div class="flex flex-col items-center">
     <h1 class="text-5xl font-bold mb-8">{recipe.title}</h1>
     <Image
