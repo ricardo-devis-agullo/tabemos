@@ -24,15 +24,30 @@ const recipe = recipes.get(slug!)!;
   { property: 'og:description', content: `Check out this recipe for ${recipe.title}` },
   { property: 'og:type', content: 'article' },
 ]}>
-  <div class="flex flex-col items-center" itemscope itemtype="https://schema.org/Recipe">
-    <h1 class="text-5xl font-bold mb-8" itemprop="name">{recipe.title}</h1>
-    <Image
-      width={606}
-      height={456}
-      src={import(`../../photos/${recipe.slug}.jpg`)}
-      alt="Photo"
-      itemprop="image"
-    />
-    <RecipeInstructions recipe={recipe} />
-  </div>
+  <main class="max-w-4xl mx-auto px-4 py-8">
+    <div class="flex flex-col items-center space-y-8" itemscope itemtype="https://schema.org/Recipe">
+      <header class="text-center w-full">
+        <h1 
+          class="text-4xl md:text-5xl font-bold mb-4 text-gray-800 font-serif" 
+          itemprop="name"
+        >
+          {recipe.title}
+        </h1>
+        <div class="w-20 h-1 bg-amber-500 mx-auto mb-8"></div>
+      </header>
+
+      <div class="w-full relative">
+        <Image
+          width={606}
+          height={456}
+          src={import(`../../photos/${recipe.slug}.jpg`)}
+          alt={`Photo of ${recipe.title}`}
+          itemprop="image"
+          class="rounded-lg shadow-lg border border-gray-100 w-full object-cover hover:shadow-xl transition-shadow duration-300"
+        />
+      </div>
+
+      <RecipeInstructions recipe={recipe} />
+    </div>
+  </main>
 </Layout>
